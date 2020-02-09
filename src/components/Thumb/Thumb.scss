@@ -1,0 +1,18 @@
+@import "../../vars.scss";
+
+.thumb {
+  &:not(first-child) {
+    padding-top: 60px;
+  }
+  &:not(last-child) {
+    padding-bottom: 60px;
+  }
+
+  & + .thumb {
+    border-top: 1px solid $K200;
+  }
+
+  h3.thumb-title {
+    margin-bottom: 8px;
+  }
+}

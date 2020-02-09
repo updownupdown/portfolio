@@ -1,0 +1,117 @@
+@import "./vars.scss";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  position: relative;
+  margin: 0;
+  // padding-top: 60px;
+  font-family: "Montserrat", sans-serif;
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: $K900;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: $K900;
+
+  .lighter {
+    color: $K600;
+    font-weight: 400;
+  }
+  .darker {
+    color: $K900;
+    font-weight: 700;
+  }
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: $K900;
+}
+
+p {
+  margin-bottom: 18px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $K700;
+}
+
+a {
+  transition: 0.3s ease all;
+  color: $blue;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($blue, 15%);
+  }
+
+  // Button
+  &.button {
+    display: inline-block;
+    height: 38px;
+    padding: 0 20px;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    line-height: 38px;
+
+    border-radius: 19px;
+    background-color: $blue;
+    box-shadow: 1px 2px 10px rgba($blue, 0.3);
+
+    &:hover {
+      background-color: lighten($blue, 10%);
+      box-shadow: 0px 1px 6px rgba($blue, 0.5);
+    }
+  }
+}
+
+// Panels
+.panel {
+  padding: 60px 0;
+  background: white;
+
+  &-grey {
+    background: $K100;
+  }
+
+  .row {
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  &-intro {
+    height: 100vh;
+
+    .row {
+      height: 100%;
+      display: flex;
+      align-content: center;
+    }
+  }
+}

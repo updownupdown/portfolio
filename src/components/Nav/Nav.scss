@@ -1,0 +1,50 @@
+@import "../../vars.scss";
+
+// Nav
+.nav {
+  transition: 0.9s ease all;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  backdrop-filter: blur(4px);
+
+  // &--top {  }
+  &--not-top {
+    background: rgba(white, 0.9);
+    box-shadow: 0 0 20px rgba($K700, 0.2);
+  }
+
+  .nav-content {
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+  }
+
+  .nav-title {
+    font-size: 16px;
+    color: $K900;
+    font-weight: 700;
+  }
+
+  .nav-menu {
+    float: right;
+
+    a.item {
+      font-size: 14px;
+      color: $K600;
+
+      &:hover {
+        color: $blue;
+      }
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+}

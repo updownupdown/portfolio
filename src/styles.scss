@@ -145,6 +145,16 @@ img {
   &.block {
     display: block;
   }
+
+  &.spaced {
+    display: block;
+    margin: 70px 0;
+  }
+
+  &.shadowed {
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.05),
+      3px 6px 30px rgba(0, 0, 0, 0.05);
+  }
 }
 
 // Panels
@@ -216,4 +226,19 @@ img {
       transform: scale(0.85);
     }
   }
+}
+
+// Under Construction
+.under-construction {
+  display: block;
+  width: 100%;
+  padding: 30px;
+
+  border-radius: 10px;
+  background: rgba(215, 84, 83, 0.04);
+
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(215, 84, 83);
 }

@@ -13,10 +13,14 @@ function Components(props) {
         </Grid.Row>
         <Grid.Row>
           <Grid.Col>
-            <img src="/components/inputs.jpg" alt="lorem" />
-            <img src="/components/tables.jpg" alt="lorem" />
-            <img src="/components/pagination.jpg" alt="lorem" />
-            <img src="/components/buttons.jpg" alt="lorem" />
+            <img className="spaced" src="/components/inputs.jpg" alt="lorem" />
+            <img className="spaced" src="/components/tables.jpg" alt="lorem" />
+            <img
+              className="spaced"
+              src="/components/pagination.jpg"
+              alt="lorem"
+            />
+            <img className="spaced" src="/components/buttons.jpg" alt="lorem" />
           </Grid.Col>
         </Grid.Row>
       </Grid>

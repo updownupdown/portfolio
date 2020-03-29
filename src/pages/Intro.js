@@ -7,7 +7,7 @@ function Intro(props) {
     <>
       <div id="intro" className="panel panel-grey panel-intro">
         <Grid>
-          <Grid.Row className="middle-xs">
+          <Grid.Row className="middle-xs" xs={12} lg={6}>
             <Grid.Col>
               <h2>
                 <span className="lighter">
@@ -27,7 +27,7 @@ function Intro(props) {
                 learning while wearing many hats.
               </p>
             </Grid.Col>
-            <Grid.Col>
+            <Grid.Col xs={12} lg={6}>
               <img className="block" src="./images/Intro.jpg" alt="Intro" />
             </Grid.Col>
           </Grid.Row>

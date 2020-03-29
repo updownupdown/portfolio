@@ -34,7 +34,9 @@ export default class Nav extends Component {
     return (
       <div className={"nav" + (this.state.top ? " nav--top" : " nav--not-top")}>
         <div className="nav-content">
-          <span className="nav-title">James Carmichael</span>
+          <Link smooth to="/#intro" className="nav-title">
+            James Carmichael
+          </Link>
           <div className="nav-menu">
             <Link smooth to="/#intro" className="item">
               Home

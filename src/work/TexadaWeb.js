@@ -15,7 +15,7 @@ function TexadaWeb(props) {
           <Grid.Col>
             <img
               className="spaced shadowed"
-              src="/texada_web/quick-receiving.jpg"
+              src="/texada_web/work-order-list.jpg"
               alt="freelance website"
             />
             <img
@@ -30,7 +30,7 @@ function TexadaWeb(props) {
             />
             <img
               className="spaced shadowed"
-              src="/texada_web/ticket-scheduling.jpg"
+              src="/texada_web/quick-receiving.jpg"
               alt="freelance website"
             />
           </Grid.Col>

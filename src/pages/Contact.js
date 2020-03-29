@@ -11,7 +11,7 @@ function Contact(props) {
           <Grid.Col>
             <h1>Contact</h1>
 
-            <h3>
+            <h3 className="contact-email">
               <Obfuscate email="updownupdown@gmail.com" />
             </h3>
 

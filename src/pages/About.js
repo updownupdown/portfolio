@@ -9,7 +9,7 @@ function About(props) {
     <div id="about" className="panel panel-grey">
       <Grid>
         <Grid.Row>
-          <Grid.Col>
+          <Grid.Col xs={12} lg={6}>
             <h1>About</h1>
             <p>
               I'm passionate about aesthetically pleasing designs and enjoyable,
@@ -23,7 +23,7 @@ function About(props) {
               technology, and philosophy.
             </p>
           </Grid.Col>
-          <Grid.Col className="col-resume">
+          <Grid.Col className="col-resume" xs={12} lg={6}>
             <a
               className="img-link-hover"
               href={resumeLink}

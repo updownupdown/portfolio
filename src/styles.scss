@@ -68,6 +68,11 @@ a {
     color: darken($blue, 15%);
   }
 
+  // Image Link Hover
+  &.img-link-hover:hover {
+    opacity: 0.6;
+  }
+
   // Button
   &.button {
     display: inline-block;
@@ -76,22 +81,76 @@ a {
 
     font-size: 14px;
     font-weight: 700;
-    color: white;
+
     line-height: 38px;
 
     border-radius: 19px;
-    background-color: $blue;
-    box-shadow: 1px 2px 10px rgba($blue, 0.3);
 
-    &:hover {
-      background-color: lighten($blue, 10%);
-      box-shadow: 0px 1px 6px rgba($blue, 0.5);
+    &:not(.button-outline) {
+      background-color: $blue;
+      box-shadow: 1px 2px 10px rgba($blue, 0.3);
+
+      color: white;
+
+      &:hover {
+        background-color: lighten($blue, 10%);
+        box-shadow: 0px 1px 6px rgba($blue, 0.5);
+      }
     }
+
+    &-outline {
+      border: 1px solid $blue;
+
+      &:hover {
+        background: $blue;
+
+        color: white;
+      }
+    }
+  }
+}
+
+// Lists
+ul,
+ol {
+  margin: 0 0 20px;
+  padding: 0 0 0 30px;
+}
+ul > li {
+  list-style-type: disc;
+}
+ol > li {
+  list-style-type: decimal;
+}
+ul > li > ul,
+ul > li > ol,
+ol > li > ol,
+ol > li > ul {
+  margin-bottom: 0;
+  padding: 5px 0 5px 30px;
+}
+
+@mixin no-list {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
+// Images
+img {
+  max-width: 100%;
+
+  &.block {
+    display: block;
   }
 }
 
 // Panels
 .panel {
+  position: relative;
+  z-index: 1;
   padding: 60px 0;
   background: white;
 
@@ -99,19 +158,62 @@ a {
     background: $K100;
   }
 
-  .row {
+  .grid {
     width: 1200px;
     max-width: 100%;
     margin: auto;
   }
 
   &-intro {
-    height: 100vh;
+    padding-top: 120px;
+    padding-bottom: 0;
 
     .row {
       height: 100%;
       display: flex;
       align-content: center;
+    }
+  }
+}
+
+// Textboxes
+.textbox {
+  display: block;
+  padding: 30px;
+
+  border-radius: 10px;
+  background: $K100;
+}
+
+// About
+.col-resume {
+  text-align: center;
+}
+
+// Contact
+.linkedin-link {
+  svg {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+// Photography
+.react-photo-gallery--gallery {
+  img {
+    transition: 0.3s ease all;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .grid-websites & img {
+    transform: scale(0.8);
+    box-shadow: 4px 6px 16px rgba($K700, 0.2);
+
+    &:hover {
+      transform: scale(0.85);
     }
   }
 }

@@ -1,0 +1,53 @@
+@import "../../vars.scss";
+
+.browse {
+  $borderRadius: 10px;
+  $padding: 16px;
+
+  display: flex;
+  flex-direction: columns;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 30px 0 20px;
+
+  border-radius: $borderRadius;
+  background: $K100;
+
+  h1 {
+    display: block;
+    margin: 0;
+    padding: $padding;
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  &-btn {
+    display: block;
+    padding: $padding;
+
+    background: transparent;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: $K600;
+
+    &:hover {
+      background: $K150;
+      color: $blue;
+    }
+
+    &.browse-btn-prev {
+      border-top-left-radius: $borderRadius;
+      border-bottom-left-radius: $borderRadius;
+      border-right: 1px solid $K200;
+    }
+    &.browse-btn-next {
+      border-top-right-radius: $borderRadius;
+      border-bottom-right-radius: $borderRadius;
+      border-left: 1px solid $K200;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 import "./Nav.scss";
 
 export default class Nav extends Component {
@@ -36,16 +36,16 @@ export default class Nav extends Component {
         <div className="nav-content">
           <span className="nav-title">James Carmichael</span>
           <div className="nav-menu">
-            <Link to="/" className="item">
+            <Link smooth to="/#intro" className="item">
               Home
             </Link>
-            <Link to="/work" className="item">
+            <Link smooth to="/#work" className="item">
               Work
             </Link>
-            <Link to="/about" className="item">
+            <Link smooth to="/#about" className="item">
               About
             </Link>
-            <Link to="/contact" className="item">
+            <Link smooth to="/#contact" className="item">
               Contact
             </Link>
           </div>

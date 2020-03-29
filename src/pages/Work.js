@@ -1,14 +1,18 @@
 import React from "react";
+import Thumb from "../components/Thumb/Thumb.js";
+import { ProjectList } from "../work/ProjectList.js";
 
 function Work(props) {
   return (
-    <div class="panel">
-      <div class="row">
-        <div class="col-xs">
-          <h1>Work</h1>
-          <p>work stuff here...</p>
-        </div>
-      </div>
+    <div id="work" className="panel">
+      {ProjectList.map(work => (
+        <Thumb
+          link={work.link}
+          image={work.image}
+          title={work.title}
+          description={work.description}
+        />
+      ))}
     </div>
   );
 }

@@ -9,10 +9,25 @@
   }
 
   & + .thumb {
-    border-top: 1px solid $K200;
+    // border-top: 1px solid $K200;
   }
 
   h3.thumb-title {
     margin-bottom: 8px;
+  }
+
+  .thumb-image {
+    transition: 0.6s ease opacity;
+
+    img {
+      max-width: 600px;
+      width: auto;
+      max-height: 400px;
+      height: auto;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }

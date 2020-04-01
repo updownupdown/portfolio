@@ -1,43 +1,49 @@
 @import "../../vars.scss";
 
 .thumb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+
   &:not(first-child) {
-    padding-top: 60px;
+    padding-top: 40px;
   }
   &:not(last-child) {
-    padding-bottom: 60px;
+    padding-bottom: 40px;
   }
 
-  @media (max-width: 992px) {
-    .col {
-      text-align: center;
-
-      &:first-child {
-        order: 2;
-        padding-top: 30px;
-      }
-    }
-  }
-
-  & + .thumb {
-    // border-top: 1px solid $K200;
-  }
-
-  h3.thumb-title {
-    margin-bottom: 8px;
-  }
-
-  .thumb-image {
-    transition: 0.6s ease opacity;
+  // Image
+  &-image {
+    transition: 0.3s ease opacity;
 
     img {
       max-width: 100%;
+      margin: 0 auto 30px;
       width: auto;
       height: auto;
     }
 
     &:hover {
-      opacity: 0.8;
+      opacity: 0.7;
     }
+  }
+
+  // Title
+  &-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  // Description
+  &-description {
+    max-width: 320px;
+  }
+
+  // Button
+  .button {
+    align-self: center;
   }
 }

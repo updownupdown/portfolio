@@ -2,37 +2,47 @@ export const ProjectList = [
   {
     component: "TexadaWeb",
     link: "/texada/",
-    image: "./texada_web/Thumb.jpg",
+    image: "./texada_web/Thumb.png",
     title: "Texada Web App",
-    description: "Texada Web app redesign."
+    description:
+      "Showcase of some screens from the completely redesigned Texada web app."
   },
   {
     component: "Rebrand",
     link: "/rebrand/",
-    image: "./texada_rebrand/Thumb.jpg",
+    image: "./texada_rebrand/Thumb.png",
     title: "Texada Rebrand",
-    description: "Texada company rebrand."
+    description:
+      "Rebranding of Texada, including a new logo, style guide, marketing material, email signature, etc."
   },
   {
     component: "Components",
     link: "/components/",
-    image: "./components/Thumb.jpg",
+    image: "./components/Thumb.png",
     title: "Texada Component Library",
-    description: "A collaboration between designer and developers across teams."
+    description:
+      "A preview of the redesigned and consolidated component library used across two web apps."
   },
   {
     component: "Websites",
     link: "/websites/",
-    image: "./websites/Thumb.jpg",
+    image: "./websites/Thumb.png",
     title: "Freelance Website Design",
-    description: "Freelance website projects."
+    description: "Custom WordPress websites designed during my freelance years."
   },
   {
     component: "Photography",
     link: "/photography/",
-    image: "./japan/Thumb.jpg",
+    image: "./photography/Thumb.png",
     title: "Photography",
     description:
-      "Photos taken with a Nikon D80 during a one month solo backpacking trip in Japan in 2008."
+      "Photos taken with during a one month solo backpacking trip in Japan in 2008."
+  },
+  {
+    component: "Loaders",
+    link: "/loaders/",
+    image: "./photography/Thumb.png",
+    title: "Loaders",
+    description: "Some fun with loading animations!"
   }
 ];

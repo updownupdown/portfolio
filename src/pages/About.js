@@ -22,6 +22,15 @@ function About(props) {
               Beside UI/UX design, I'm love hiking, camping, piano, politics,
               technology, and philosophy.
             </p>
+            <ul>
+              <li>Figma, Adobe Illustrator, Photoshop</li>
+              <li>Strong knowledge of HTML, CSS/LESS/SASS, JS</li>
+              <li>Working knowledge of Git, React, VS Code</li>
+              <li>
+                10 years experience in agency and freelance web and print design
+              </li>
+              <li>1 year experience as UI/UX Designer (web/mobile apps)</li>
+            </ul>
           </Grid.Col>
           <Grid.Col className="col-resume" xs={12} lg={6}>
             <a
@@ -33,7 +42,6 @@ function About(props) {
               <img src="./resume/Resume.png" alt="resume preview" />
             </a>
             <br />
-
             <a
               className="button"
               href={resumeLink}

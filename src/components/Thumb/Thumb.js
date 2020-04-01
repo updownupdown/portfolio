@@ -6,23 +6,17 @@ import "./Thumb.scss";
 
 function Thumb(props) {
   return (
-    <Grid>
-      <Grid.Row className="thumb middle-xs">
-        <Grid.Col xs={12} lg={6}>
-          <h3 className="thumb-title">{props.title}</h3>
-          <p className="thumb-description">{props.description}</p>
-          <Link to={props.link} className="button button-outline">
-            View
-          </Link>
-        </Grid.Col>
-        <Grid.Col xs={12} lg={6}>
-          <a className="thumb-image" href={props.link}>
-            {props.image && <img src={props.image} alt={props.title} />}
-            {props.children}
-          </a>
-        </Grid.Col>
-      </Grid.Row>
-    </Grid>
+    <Grid.Col className="thumb" sm={12} lg={6}>
+      <a className="thumb-image" href={props.link}>
+        {props.image && <img src={props.image} alt={props.title} />}
+        {props.children}
+      </a>
+      <h3 className="thumb-title">{props.title}</h3>
+      <p className="thumb-description">{props.description}</p>
+      <Link to={props.link} className="button button-outline">
+        View
+      </Link>
+    </Grid.Col>
   );
 }
 

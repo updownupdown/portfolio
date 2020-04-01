@@ -9,7 +9,6 @@
 body {
   position: relative;
   margin: 0;
-  // padding-top: 60px;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -115,6 +114,11 @@ ul,
 ol {
   margin: 0 0 20px;
   padding: 0 0 0 30px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: $K700;
 }
 ul > li {
   list-style-type: disc;
@@ -149,6 +153,14 @@ img {
   &.spaced {
     display: block;
     margin: 70px 0;
+  }
+
+  &.align-right {
+    margin-left: auto;
+  }
+  &.align-center {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &.shadowed {
@@ -193,15 +205,43 @@ img {
       align-content: center;
     }
   }
+
+  &-bottom-shadow,
+  &-top-shadow {
+    z-index: 1;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      width: 100%;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  &-bottom-shadow:before {
+    bottom: -60px;
+  }
+  &-top-shadow:before {
+    top: -60px;
+  }
 }
 
 // Textboxes
 .textbox {
   display: block;
-  padding: 30px;
+  padding: 30px 30px 15px;
 
   border-radius: 10px;
   background: $K100;
+
+  &.white {
+    background: $white;
+  }
 }
 
 // About
@@ -210,11 +250,14 @@ img {
 }
 
 // Contact
-@media (max-width: 992px) {
-  h3.contact-email {
+.contact-email {
+  line-height: 2;
+
+  @media (max-width: 992px) {
     font-size: 16px;
   }
 }
+
 .linkedin-link {
   svg {
     width: 30px;

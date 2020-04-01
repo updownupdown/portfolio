@@ -5,17 +5,17 @@ import "../components/Grid.scss";
 function Intro(props) {
   return (
     <>
-      <div id="intro" className="panel panel-grey panel-intro">
+      <div
+        id="intro"
+        className="panel panel-grey panel-intro panel-bottom-shadow"
+      >
         <Grid>
-          <Grid.Row className="middle-xs" xs={12} lg={6}>
+          <Grid.Row className="middle-xs" xs={12} lg={4}>
             <Grid.Col>
               <h2>
-                <span className="lighter">
-                  I’m a UI/UX Designer
-                  <br />
-                  and I
-                </span>
-                <span className="darker"> love elegant designs.</span>
+                <span className="lighter">I’m a UI/UX Designer and</span>
+                <br />
+                <span className="darker">I love elegant designs.</span>
               </h2>
 
               <p>
@@ -27,21 +27,8 @@ function Intro(props) {
                 learning while wearing many hats.
               </p>
             </Grid.Col>
-            <Grid.Col xs={12} lg={6}>
+            <Grid.Col xs={12} lg={8}>
               <img className="block" src="./images/Intro.jpg" alt="Intro" />
-            </Grid.Col>
-          </Grid.Row>
-        </Grid>
-      </div>
-      <div className="panel panel-construction">
-        <Grid>
-          <Grid.Row>
-            <Grid.Col>
-              <Grid.Col>
-                <div className="under-construction">
-                  This website is under construction, don't mind the mess!
-                </div>
-              </Grid.Col>
             </Grid.Col>
           </Grid.Row>
         </Grid>

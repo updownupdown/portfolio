@@ -39,7 +39,6 @@ export const photos = [
     width: 669,
     height: 1000
   },
-
   {
     src: `/photography/KOY_5890.jpg`,
     width: 669,
@@ -75,13 +74,11 @@ export const photos = [
     width: 669,
     height: 1000
   },
-
   {
     src: `/photography/KYO_9795.jpg`,
     width: 669,
     height: 1000
   },
-
   {
     src: `/photography/MAT_3387.jpg`,
     width: 669,
@@ -127,7 +124,6 @@ export const photos = [
     width: 1494,
     height: 1000
   },
-
   {
     src: `/photography/TOK_1578.jpg`,
     width: 669,

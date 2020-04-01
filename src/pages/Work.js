@@ -1,18 +1,23 @@
 import React from "react";
-import Thumb from "../components/Thumb/Thumb.js";
-import { ProjectList } from "../work/ProjectList.js";
+import Thumb from "../components/Thumb/Thumb";
+import { Grid } from "../components/Grid/Grid";
+import { ProjectList } from "../work/ProjectList";
 
 function Work(props) {
   return (
     <div id="work" className="panel">
-      {ProjectList.map(work => (
-        <Thumb
-          link={work.link}
-          image={work.image}
-          title={work.title}
-          description={work.description}
-        />
-      ))}
+      <Grid>
+        <Grid.Row className="center-xs">
+          {ProjectList.map(work => (
+            <Thumb
+              link={work.link}
+              image={work.image}
+              title={work.title}
+              description={work.description}
+            />
+          ))}
+        </Grid.Row>
+      </Grid>
     </div>
   );
 }

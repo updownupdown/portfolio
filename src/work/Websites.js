@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
-import { websites } from "./WebsitesList";
+import { websites } from "./lists/websites";
 import { Grid } from "../components/Grid/Grid";
 import Browse from "../components/Browse/Browse.js";
 
@@ -29,12 +29,11 @@ function Websites(props) {
 
   return (
     <>
+      <Browse component="Websites" pos="top" />
       <div className="panel">
         <Grid className="grid-websites">
           <Grid.Row>
             <Grid.Col>
-              <Browse component="Websites" />
-
               <Gallery
                 photos={websites}
                 onClick={openLightbox}
@@ -59,6 +58,7 @@ function Websites(props) {
           </Grid.Row>
         </Grid>
       </div>
+      <Browse component="Websites" pos="bottom" />
     </>
   );
 }

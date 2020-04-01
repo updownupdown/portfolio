@@ -1,16 +1,22 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
+import { Grid } from "../../components/Grid/Grid.js";
 import { ProjectList } from "../../work/ProjectList.js";
+import ArrowBack from "./ArrowBack";
+import ArrowForward from "./ArrowForward";
 
 import "./Browse.scss";
 
 export default class Browse extends Component {
   static propTypes = {
-    component: PropTypes.string.isRequired
+    component: PropTypes.string.isRequired,
+    pos: PropTypes.string.isRequired
   };
 
   static defaultProps = {
-    component: ""
+    component: "",
+    pos: ""
   };
 
   render() {
@@ -28,14 +34,39 @@ export default class Browse extends Component {
       index === listSize ? ProjectList[0].link : ProjectList[index + 1].link;
 
     return (
-      <div className="browse">
-        <a href={prev} className="browse-btn browse-btn-prev">
-          Previous
-        </a>
-        <h1>{title}</h1>
-        <a href={next} className="browse-btn browse-btn-next">
-          Next
-        </a>
+      <div
+        className={classNames("panel panel-grey panel-browse", {
+          "panel-bottom-shadow": this.props.pos === "top",
+          "panel-top-shadow": this.props.pos === "bottom"
+        })}
+      >
+        <Grid>
+          <Grid.Row>
+            <Grid.Col>
+              <div className={`browse browse-${this.props.pos}`}>
+                <a href={prev} className="browse-btn browse-btn-prev">
+                  <ArrowBack />
+                </a>
+
+                {this.props.pos === "top" && (
+                  <div className="browse-heading-group">
+                    <h6 className="browse-heading-work">Work</h6>
+                    <h1 className="browse-heading-title">{title}</h1>
+                  </div>
+                )}
+                {this.props.pos === "bottom" && (
+                  <div className="browse-heading-group">
+                    <h4 className="browse-heading-more">Browse Projects</h4>
+                  </div>
+                )}
+
+                <a href={next} className="browse-btn browse-btn-next">
+                  <ArrowForward />
+                </a>
+              </div>
+            </Grid.Col>
+          </Grid.Row>
+        </Grid>
       </div>
     );
   }

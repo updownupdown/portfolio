@@ -1,47 +1,62 @@
 @import "../../vars.scss";
 
+@media (min-width: 768px) {
+  body {
+    padding-top: 60px;
+  }
+}
+
 // Nav
 .nav {
-  transition: 0.9s ease all;
+  transition: 0.9s ease box-shadow;
   z-index: 10;
   display: flex;
   justify-content: space-between;
   align-items: center;
   top: 0;
   width: 100%;
-  padding: 0 20px;
 
-  position: absolute;
+  background: $K100;
+
+  @media (max-width: 1240px) {
+    padding: 0 20px;
+  }
 
   @media (max-width: 767px) {
+    position: relative;
     height: 80px;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     position: fixed;
     height: 60px;
     backdrop-filter: blur(4px);
 
     &--not-top {
-      background: rgba(white, 0.9);
+      background: rgba($K100, 0.9);
       box-shadow: 0 0 20px rgba($K700, 0.2);
     }
   }
 
   .nav-content {
-    width: 1200px;
-    max-width: 100%;
     margin: auto;
     height: 100%;
     display: flex;
     align-items: center;
 
     @media (max-width: 767px) {
+      width: 100%;
       flex-direction: column;
       justify-content: space-around;
+      padding: 0 20px;
     }
     @media (min-width: 768px) {
+      width: 100%;
       justify-content: space-between;
+    }
+    @media (min-width: 1240px) {
+      width: 1200px;
+      max-width: 100%;
     }
   }
 
@@ -53,14 +68,15 @@
     @media (max-width: 767px) {
       margin-top: 12px;
     }
+
+    &:hover {
+      color: $blue;
+    }
   }
 
   .nav-menu {
     @media (max-width: 767px) {
       margin-bottom: 12px;
-    }
-    @media (min-width: 768px) {
-      float: right;
     }
 
     a.item {

@@ -1,42 +1,71 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
+import Gallery from "react-photo-gallery";
+import Carousel, { Modal, ModalGateway } from "react-images";
 import { Grid } from "../components/Grid/Grid.js";
 import Browse from "../components/Browse/Browse.js";
+import { photos } from "./lists/texadaWeb";
 
 function TexadaWeb(props) {
+  const [currentImage, setCurrentImage] = useState(0);
+  const [viewerIsOpen, setViewerIsOpen] = useState(false);
+
+  const openLightbox = useCallback((event, { photo, index }) => {
+    setCurrentImage(index);
+    setViewerIsOpen(true);
+  }, []);
+
+  const closeLightbox = () => {
+    setCurrentImage(0);
+    setViewerIsOpen(false);
+  };
+
   return (
-    <div className="panel">
-      <Grid>
-        <Grid.Row>
-          <Grid.Col>
-            <Browse component="TexadaWeb" />
-          </Grid.Col>
-        </Grid.Row>
-        <Grid.Row className="middle-xs">
-          <Grid.Col>
-            <img
-              className="spaced shadowed"
-              src="/texada_web/work-order-list.jpg"
-              alt="freelance website"
-            />
-            <img
-              className="spaced shadowed"
-              src="/texada_web/ticket-edit.jpg"
-              alt="freelance website"
-            />
-            <img
-              className="spaced shadowed"
-              src="/texada_web/ticket-scheduling.jpg"
-              alt="freelance website"
-            />
-            <img
-              className="spaced shadowed"
-              src="/texada_web/quick-receiving.jpg"
-              alt="freelance website"
-            />
-          </Grid.Col>
-        </Grid.Row>
-      </Grid>
-    </div>
+    <>
+      <Browse component="TexadaWeb" pos="top" />
+      <div className="panel">
+        <Grid>
+          <Grid.Row className="middle-xs">
+            <Grid.Col>
+              <img
+                className="spaced shadowed"
+                src="/texada_web/ticket_scheduling.png"
+                alt="Ticket Scheduling"
+              />
+              <img
+                className="spaced"
+                src="/texada_web/nav.png"
+                alt="Texada Navigation Menu"
+              />
+              <img
+                className="spaced shadowed"
+                src="/texada_web/tickets_list.png"
+                alt="Tickets List"
+              />
+            </Grid.Col>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Col>
+              <Gallery photos={photos} onClick={openLightbox} />
+              <ModalGateway>
+                {viewerIsOpen ? (
+                  <Modal onClose={closeLightbox}>
+                    <Carousel
+                      currentIndex={currentImage}
+                      views={photos.map(x => ({
+                        ...x,
+                        srcset: x.srcSet,
+                        caption: x.title
+                      }))}
+                    />
+                  </Modal>
+                ) : null}
+              </ModalGateway>
+            </Grid.Col>
+          </Grid.Row>
+        </Grid>
+      </div>
+      <Browse component="TexadaWeb" pos="bottom" />
+    </>
   );
 }
 

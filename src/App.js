@@ -13,6 +13,7 @@ import Rebrand from "./work/Rebrand.js";
 import Websites from "./work/Websites.js";
 import Components from "./work/Components.js";
 import TexadaWeb from "./work/TexadaWeb.js";
+import Loaders from "./work/Loaders.js";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/websites" component={Websites} />
         <Route path="/components" component={Components} />
         <Route path="/texada" component={TexadaWeb} />
+        <Route path="/loaders" component={Loaders} />
       </div>
     </BrowserRouter>
   );

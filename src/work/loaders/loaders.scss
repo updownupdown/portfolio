@@ -1,0 +1,21 @@
+@import "loader1.scss";
+@import "loader2.scss";
+@import "loader3.scss";
+@import "loader4.scss";
+@import "loader5.scss";
+@import "loader6.scss";
+
+.loader-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+  width: 400px;
+  max-width: 100%;
+
+  min-height: 200px;
+  position: relative;
+
+  border-radius: 10px;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.08);
+}

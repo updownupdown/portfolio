@@ -1,0 +1,44 @@
+.loader-4 {
+  .loading {
+    text-align: center;
+  }
+  .loading span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    margin: 100px auto;
+    background: #e7eef2;
+    border-radius: 50px;
+    animation: loader4 2s infinite alternate;
+    animation-timing-function: ease-in-out;
+  }
+
+  .loading span:nth-of-type(2) {
+    animation-delay: 0.4s;
+  }
+  .loading span:nth-of-type(3) {
+    animation-delay: 0.8s;
+  }
+  .loading span:nth-of-type(4) {
+    animation-delay: 1.2s;
+  }
+  .loading span:nth-of-type(5) {
+    animation-delay: 1.6s;
+  }
+
+  @keyframes loader4 {
+    0% {
+      background: #e7eef2;
+      transform: scale(0.2) translatey(0px);
+    }
+    50% {
+      background: #47c2b1;
+      transform: scale(0.8) translatey(-30px);
+    }
+    100% {
+      background: #e7eef2;
+      transform: scale(0.2) translatey(0px);
+    }
+  }
+}

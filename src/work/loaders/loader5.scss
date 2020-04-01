@@ -1,0 +1,113 @@
+.loader-5 {
+  .loading {
+    position: relative;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: 16px;
+  }
+  .loading span {
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin: -5px 0 0;
+    background: #fff;
+    border-radius: 50%;
+    animation: loader5 2s infinite;
+    animation-timing-function: ease-in-out;
+    transform: rotate(90deg);
+  }
+
+  .loading span:nth-of-type(1) {
+    left: 0%;
+  }
+  .loading span:nth-of-type(2) {
+    left: 20%;
+    animation-delay: 0.3s;
+  }
+  .loading span:nth-of-type(3) {
+    left: 40%;
+    animation-delay: 0.6s;
+  }
+  .loading span:nth-of-type(4) {
+    left: 60%;
+    animation-delay: 0.9s;
+  }
+  .loading span:nth-of-type(5) {
+    left: 80%;
+    animation-delay: 1.2s;
+  }
+
+  @keyframes loader5 {
+    /* NORMAL */
+    0% {
+      top: 0%;
+      background: #47c2b1;
+      transform: scale(0.6);
+    }
+    /* BIG */
+    10% {
+      background: #47c2b1;
+      transform: scale(1);
+    }
+    /* NORMAL */
+    20% {
+      top: -100%;
+      background: #47c2b1;
+      transform: scale(0.6);
+    }
+    /* SMALL */
+    30% {
+      background: #e7eef2;
+      transform: scale(0.2);
+    }
+    /* NORMAL */
+    40% {
+      top: 0%;
+      background: #b8cbd9;
+      transform: scale(0.6);
+    }
+    /* NORMAL */
+    100% {
+      top: 0%;
+      background: #b8cbd9;
+      transform: scale(0.6);
+    }
+  }
+
+  /*
+      @-webkit-keyframes loader {
+       
+        0% {
+          top: 0%;
+          background: #47c2b1;    
+          transform: scale(0.6);
+        }
+      
+        25% {
+          background: #47c2b1;
+          transform: scale(1);
+        }
+        
+        50% {
+          top: 100%;
+          background: #47c2b1;
+          transform: scale(0.6);
+        }
+       
+        75% {
+          background: #e7eef2;
+          transform: scale(0.2);
+        }
+       
+        100% {
+          top: 0%;
+          background: #B8CBD9;
+          transform: scale(0.6);
+        }
+      }
+      */
+}

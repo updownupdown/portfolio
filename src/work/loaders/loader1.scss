@@ -1,6 +1,9 @@
 @import "../../vars.scss";
 
 .loader-1 {
+  $orange: #ff7f2a;
+  $red: #dc2c2c;
+
   .dots {
     position: relative;
     text-align: center;
@@ -48,34 +51,34 @@
     /* NORMAL */
     0% {
       top: 0%;
-      background: $K600;
-      transform: scale(1);
+      background: $red;
+      transform: scale(0.8);
       z-index: 1;
     }
     /* BIG */
     25% {
-      background: $K600;
-      transform: scale(1.4);
+      background: $orange;
+      transform: scale(1.2);
       z-index: 3;
     }
     /* NORMAL */
     50% {
       top: 100%;
-      background: $K600;
-      transform: scale(1);
+      background: $red;
+      transform: scale(0.8);
       z-index: 1;
     }
     /* SMALL */
     75% {
       background: $white;
-      transform: scale(0.3);
+      transform: scale(0.2);
       z-index: 1;
     }
     /* NORMAL */
     100% {
       top: 0%;
-      background: $K600;
-      transform: scale(1);
+      background: $red;
+      transform: scale(0.8);
       z-index: 1;
     }
   }

@@ -37,12 +37,12 @@ export const ProjectList = [
     title: "Photography",
     description:
       "Photos taken with during a one month solo backpacking trip in Japan in 2008."
-  },
-  {
-    component: "Loaders",
-    link: "/loaders/",
-    image: "./photography/Thumb.png",
-    title: "Loaders",
-    description: "Some fun with loading animations!"
   }
+  // {
+  //   component: "Loaders",
+  //   link: "/loaders/",
+  //   image: "./photography/Thumb.png",
+  //   title: "Loaders",
+  //   description: "Some fun with loading animations!",
+  // }
 ];

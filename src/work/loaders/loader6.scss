@@ -1,73 +1,65 @@
-.loader-6 {
-  .loading {
-    position: relative;
-    text-align: center;
-    display: block;
-    margin: 0 auto;
-    width: 95px;
-    height: 26px;
-  }
-  .loading span {
-    display: inline-block;
-    vertical-align: middle;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    margin: -5px 0 0;
-    background: #fff;
-    border-radius: 50%;
-    animation: loader6 1.5s infinite;
-    animation-timing-function: ease-in-out;
-    transform: rotate(-90deg);
-  }
+.loader-wrap-6 {
+  $background: #dbd5d5;
 
-  .loading span:nth-of-type(1) {
-    left: 0%;
-  }
-  .loading span:nth-of-type(2) {
-    left: 20%;
-    animation-delay: 0.2s;
-  }
-  .loading span:nth-of-type(3) {
-    left: 40%;
-    animation-delay: 0.4s;
-  }
-  .loading span:nth-of-type(4) {
-    left: 60%;
-    animation-delay: 0.6s;
-  }
-  .loading span:nth-of-type(5) {
-    left: 80%;
-    animation-delay: 0.8s;
-  }
+  $pale: #a17a74;
+  $main: #a17a74;
 
-  @keyframes loader6 {
-    /* NORMAL */
-    0% {
-      top: 0%;
-      background: #47c2b1;
-      transform: scale(0.6);
+  background: $background;
+
+  .loader-6 {
+    .loading {
+      position: relative;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      width: 120px;
+      height: 30px;
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        margin: 0 0 0 8px;
+        background: $pale;
+        border-radius: 50%;
+        animation: loader6 2s infinite;
+        animation-timing-function: ease-in-out;
+        transform: rotate(-90deg);
+      }
     }
-    /* BIG */
-    25% {
-      background: #47c2b1;
-      transform: scale(1);
+
+    @for $i from 1 through 5 {
+      .loading span:nth-of-type(#{$i}) {
+        left: percentage($i * 0.2 - 0.2);
+        animation-delay: (-2s - ($i * 0.2));
+      }
     }
-    /* NORMAL */
-    50% {
-      top: 100%;
-      transform: scale(0.6);
-    }
-    /* SMALL */
-    75% {
-      background: #e7eef2;
-      transform: scale(0.2);
-    }
-    /* NORMAL */
-    100% {
-      top: 0%;
-      background: #47c2b1;
-      transform: scale(0.6);
+
+    @keyframes loader6 {
+      0% {
+        top: 0%;
+        background: $main;
+        transform: scale(0.6);
+      }
+      25% {
+        background: $main;
+        transform: scale(1);
+      }
+      50% {
+        top: 100%;
+        transform: scale(0.6);
+      }
+      75% {
+        background: $pale;
+        transform: scale(0.4);
+      }
+      100% {
+        top: 0%;
+        background: $main;
+        transform: scale(0.6);
+      }
     }
   }
 }

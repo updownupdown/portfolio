@@ -4,6 +4,7 @@ import Carousel, { Modal, ModalGateway } from "react-images";
 import { photos } from "./lists/photography";
 import { Grid } from "../components/Grid/Grid";
 import Browse from "../components/Browse/Browse.js";
+import { motion } from "framer-motion";
 
 function Photography(props) {
   const [currentImage, setCurrentImage] = useState(0);
@@ -22,7 +23,11 @@ function Photography(props) {
   return (
     <>
       <Browse component="Photography" pos="top" />
-      <div className="panel">
+      <motion.div
+        className="panel"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
         <Grid>
           <Grid.Row>
             <Grid.Col>
@@ -49,10 +54,10 @@ function Photography(props) {
                   <Modal onClose={closeLightbox}>
                     <Carousel
                       currentIndex={currentImage}
-                      views={photos.map(x => ({
+                      views={photos.map((x) => ({
                         ...x,
                         srcset: x.srcSet,
-                        caption: x.title
+                        caption: x.title,
                       }))}
                     />
                   </Modal>
@@ -61,7 +66,7 @@ function Photography(props) {
             </Grid.Col>
           </Grid.Row>
         </Grid>
-      </div>
+      </motion.div>
       <Browse component="Photography" pos="bottom" />
     </>
   );

@@ -1,154 +1,85 @@
 @import "../../vars.scss";
 
-.loader-2 {
-  .loading {
+.loader-wrap-2 {
+  $backgroud: #232c43;
+  $color1: #d4ffaa;
+  $color2: #ff2a7f;
+
+  background: $backgroud;
+
+  .loader-2 {
     position: relative;
-    text-align: center;
-    display: block;
-    margin: 0 auto;
-    width: 100px;
-    height: 60px;
-  }
-  .loading span {
-    display: inline-block;
-    vertical-align: middle;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    margin: -5px 0 0;
-    background: #47c2b1;
-    border-radius: 50%;
-    animation: loader 2s infinite;
-    animation-timing-function: ease-in-out;
-    transform: rotate(-90deg);
-  }
+    width: 60px;
+    height: 130px;
 
-  .loading span:nth-of-type(1) {
-    left: 0%;
-  }
-  .loading span:nth-of-type(2) {
-    left: 20%;
-    animation-delay: 0.2s;
-  }
-  .loading span:nth-of-type(3) {
-    left: 40%;
-    animation-delay: 0.4s;
-  }
-  .loading span:nth-of-type(4) {
-    left: 60%;
-    animation-delay: 0.6s;
-  }
-  .loading span:nth-of-type(5) {
-    left: 80%;
-    animation-delay: 0.8s;
-  }
+    .loading,
+    .loading2 {
+      position: absolute;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
 
-  @keyframes loader {
-    /* NORMAL */
-    0% {
-      top: 0%;
-      transform: scale(1);
-      z-index: 2;
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        animation: loader2 2s infinite ease-in-out;
+      }
     }
-    /* BIG */
-    25% {
-      transform: scale(1.5);
-      z-index: 3;
-    }
-    /* NORMAL */
-    50% {
-      top: 100%;
-      transform: scale(1);
-      z-index: 2;
-    }
-    /* SMALL */
-    75% {
-      transform: scale(0.3);
-      z-index: 1;
-    }
-    /* NORMAL */
-    100% {
-      top: 0%;
-      transform: scale(1);
-      z-index: 2;
-    }
-  }
 
-  /* ====================== */
-  /* ====================== */
-  /* ====================== */
+    .loading span {
+      background: $color1;
+    }
 
-  .loading2 {
-    position: relative;
-    text-align: center;
-    display: block;
-    margin: -60px auto 0;
-    width: 100px;
-    height: 60px;
-  }
-  .loading2 span {
-    display: inline-block;
-    vertical-align: middle;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    margin: -5px 0 0 10px;
-    background: #082e48;
-    border-radius: 50%;
-    animation: loader2 2s infinite;
-    animation-timing-function: ease-in-out;
-    animation-delay: 1s;
-  }
+    .loading2 {
+      margin-left: -14px;
 
-  .loading2 span:nth-of-type(1) {
-    left: 0%;
-    animation-delay: 1s;
-  }
-  .loading2 span:nth-of-type(2) {
-    left: 20%;
-    animation-delay: 1.2s;
-  }
-  .loading2 span:nth-of-type(3) {
-    left: 40%;
-    animation-delay: 1.4s;
-  }
-  .loading2 span:nth-of-type(4) {
-    left: 60%;
-    animation-delay: 1.6s;
-  }
-  .loading2 span:nth-of-type(5) {
-    left: 80%;
-    animation-delay: 1.8s;
-  }
+      span {
+        margin-top: 13px;
+        background: $color2;
+      }
+    }
 
-  @keyframes loader2 {
-    /* NORMAL */
-    0% {
-      top: 0%;
-      transform: scale(1);
-      z-index: 2;
+    @for $i from 1 through 5 {
+      .loading span:nth-of-type(#{$i}) {
+        top: percentage($i * 0.2 - 0.2);
+        animation-delay: (-2s - ($i * 0.2));
+      }
+      .loading2 span:nth-of-type(#{$i}) {
+        top: percentage($i * 0.2 - 0.2);
+        animation-delay: (-3s - ($i * 0.2));
+      }
     }
-    /* BIG */
-    25% {
-      transform: scale(1.5);
-      z-index: 3;
-    }
-    /* NORMAL */
-    50% {
-      top: 100%;
-      transform: scale(1);
-      z-index: 2;
-    }
-    /* SMALL */
-    75% {
-      transform: scale(0.3);
-      z-index: 1;
-    }
-    /* NORMAL */
-    100% {
-      top: 0%;
-      transform: scale(1);
-      z-index: 2;
+
+    @keyframes loader2 {
+      0% {
+        left: 0%;
+        transform: scale(0.6);
+        z-index: 2;
+      }
+      25% {
+        transform: scale(1);
+        z-index: 3;
+      }
+      50% {
+        left: 100%;
+        transform: scale(0.6);
+        z-index: 2;
+      }
+      75% {
+        transform: scale(0.2);
+        z-index: 1;
+      }
+      100% {
+        left: 0%;
+        transform: scale(0.6);
+        z-index: 2;
+      }
     }
   }
 }

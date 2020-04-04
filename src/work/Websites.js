@@ -4,6 +4,7 @@ import Carousel, { Modal, ModalGateway } from "react-images";
 import { websites } from "./lists/websites";
 import { Grid } from "../components/Grid/Grid";
 import Browse from "../components/Browse/Browse.js";
+import { motion } from "framer-motion";
 
 function columns(containerWidth) {
   let columns = 1;
@@ -30,7 +31,11 @@ function Websites(props) {
   return (
     <>
       <Browse component="Websites" pos="top" />
-      <div className="panel">
+      <motion.div
+        className="panel"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
         <Grid className="grid-websites">
           <Grid.Row>
             <Grid.Col>
@@ -45,10 +50,10 @@ function Websites(props) {
                   <Modal onClose={closeLightbox}>
                     <Carousel
                       currentIndex={currentImage}
-                      views={websites.map(x => ({
+                      views={websites.map((x) => ({
                         ...x,
                         srcset: x.srcSet,
-                        caption: x.title
+                        caption: x.title,
                       }))}
                     />
                   </Modal>
@@ -57,7 +62,7 @@ function Websites(props) {
             </Grid.Col>
           </Grid.Row>
         </Grid>
-      </div>
+      </motion.div>
       <Browse component="Websites" pos="bottom" />
     </>
   );

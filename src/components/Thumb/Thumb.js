@@ -6,7 +6,7 @@ import "./Thumb.scss";
 
 function Thumb(props) {
   return (
-    <Grid.Col className="thumb" sm={12} lg={6}>
+    <Grid.Col className="thumb" xs={12} lg={6}>
       <a className="thumb-image" href={props.link}>
         {props.image && <img src={props.image} alt={props.title} />}
         {props.children}

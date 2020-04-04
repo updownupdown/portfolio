@@ -1,47 +1,53 @@
 @import "../../vars.scss";
 
-.loader-3 {
-  .loading {
-    position: relative;
-    text-align: center;
-    display: block;
-    margin: 0 auto;
-    width: 100px;
-    height: 30px;
-  }
-  .loading span {
-    display: inline-block;
-    vertical-align: middle;
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    margin: -5px 0 0;
-    background: #47c2b1;
-    border-radius: 50%;
-    animation: loader3 0.9s infinite alternate;
-    animation-timing-function: ease-in-out;
-  }
+.loader-wrap-3 {
+  $background: #48c1d1;
+  $dots: #fff;
 
-  .loading span:nth-of-type(1) {
-    left: 0%;
-  }
-  .loading span:nth-of-type(2) {
-    left: 20%;
-    animation-delay: 0.3s;
-  }
-  .loading span:nth-of-type(3) {
-    left: 40%;
-    animation-delay: 0.6s;
-  }
+  background: $background;
 
-  @keyframes loader3 {
-    0% {
-      background: #47c2b1;
-      transform: scale(1);
+  .loader-3 {
+    .loading {
+      position: relative;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      width: 60px;
+      height: 0;
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        margin: -5px 0 0;
+        border-radius: 50%;
+        background: $dots;
+        animation: loader3 1.2s infinite alternate;
+        animation-timing-function: ease-in-out;
+      }
     }
-    100% {
-      background: #e7eef2;
-      transform: scale(0.5);
+
+    .loading span:nth-of-type(1) {
+      left: 0%;
+    }
+    .loading span:nth-of-type(2) {
+      left: 33.333%;
+      animation-delay: 0.4s;
+    }
+    .loading span:nth-of-type(3) {
+      left: 66.666%;
+      animation-delay: 0.8s;
+    }
+
+    @keyframes loader3 {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0.2);
+      }
     }
   }
 }

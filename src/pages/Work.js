@@ -8,8 +8,9 @@ function Work(props) {
     <div id="work" className="panel">
       <Grid>
         <Grid.Row className="center-xs">
-          {ProjectList.map(work => (
+          {ProjectList.map((work) => (
             <Thumb
+              key={work.component}
               link={work.link}
               image={work.image}
               title={work.title}

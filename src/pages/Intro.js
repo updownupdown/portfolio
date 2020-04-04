@@ -1,6 +1,5 @@
 import React from "react";
 import { Grid } from "../components/Grid/Grid.js";
-import "../components/Grid.scss";
 
 function Intro(props) {
   return (
@@ -28,7 +27,7 @@ function Intro(props) {
               </p>
             </Grid.Col>
             <Grid.Col xs={12} lg={8}>
-              <img className="block" src="./images/Intro.jpg" alt="Intro" />
+              <img className="block" src="./images/Intro.png" alt="Intro" />
             </Grid.Col>
           </Grid.Row>
         </Grid>

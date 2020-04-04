@@ -1,11 +1,13 @@
 import React from "react";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
 
-// Components
+// Nav
 import Nav from "./components/Nav/Nav.js";
 
 // Pages
 import Home from "./pages/Home.js";
+import NotFound from "./pages/NotFound.js";
 
 // Work
 import Photography from "./work/Photography.js";
@@ -18,15 +20,21 @@ import Loaders from "./work/Loaders.js";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="App">
+        <div id="top"></div>
         <Nav />
-        <Route exact path="/" component={Home} />
-        <Route path="/photography" component={Photography} />
-        <Route path="/rebrand" component={Rebrand} />
-        <Route path="/websites" component={Websites} />
-        <Route path="/components" component={Components} />
-        <Route path="/texada" component={TexadaWeb} />
-        <Route path="/loaders" component={Loaders} />
+
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/photography" component={Photography} />
+          <Route path="/rebrand" component={Rebrand} />
+          <Route path="/websites" component={Websites} />
+          <Route path="/components" component={Components} />
+          <Route path="/texada" component={TexadaWeb} />
+          <Route path="/loaders" component={Loaders} />
+          <Route component={NotFound} />
+        </Switch>
       </div>
     </BrowserRouter>
   );

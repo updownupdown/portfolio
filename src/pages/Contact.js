@@ -1,7 +1,6 @@
 import React from "react";
 import { Grid } from "../components/Grid/Grid.js";
 import Obfuscate from "react-obfuscate";
-import "../components/Grid.scss";
 
 function Contact(props) {
   return (

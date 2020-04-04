@@ -6,6 +6,8 @@ import { ProjectList } from "../../work/ProjectList.js";
 import ArrowBack from "./ArrowBack";
 import ArrowForward from "./ArrowForward";
 
+import { motion } from "framer-motion";
+
 import "./Browse.scss";
 
 export default class Browse extends Component {
@@ -51,7 +53,14 @@ export default class Browse extends Component {
                 {this.props.pos === "top" && (
                   <div className="browse-heading-group">
                     <h6 className="browse-heading-work">Work</h6>
-                    <h1 className="browse-heading-title">{title}</h1>
+                    <motion.h1
+                      className="browse-heading-title"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                    >
+                      {title}
+                    </motion.h1>
                   </div>
                 )}
                 {this.props.pos === "bottom" && (

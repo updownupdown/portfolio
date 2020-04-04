@@ -7,7 +7,7 @@ export default class Nav extends Component {
     super(props);
 
     this.state = {
-      top: true
+      top: true,
     };
   }
 
@@ -26,33 +26,37 @@ export default class Nav extends Component {
     const top = window.pageYOffset === 0 ? true : false;
 
     this.setState({
-      top
+      top,
     });
   };
 
   render() {
     return (
-      <div className={"nav" + (this.state.top ? " nav--top" : " nav--not-top")}>
-        <div className="nav-content">
-          <Link smooth to="/#intro" className="nav-title">
-            James Carmichael
-          </Link>
-          <div className="nav-menu">
-            <Link smooth to="/#intro" className="item">
-              Home
+      <>
+        <div
+          className={"nav" + (this.state.top ? " nav--top" : " nav--not-top")}
+        >
+          <div className="nav-content">
+            <Link to="/#top" className="nav-title">
+              James Carmichael
             </Link>
-            <Link smooth to="/#work" className="item">
-              Work
-            </Link>
-            <Link smooth to="/#about" className="item">
-              About
-            </Link>
-            <Link smooth to="/#contact" className="item">
-              Contact
-            </Link>
+            <div className="nav-menu">
+              <Link smooth to="/#top" className="item">
+                Home
+              </Link>
+              <Link smooth to="/#work" className="item">
+                Work
+              </Link>
+              <Link smooth to="/#about" className="item">
+                About
+              </Link>
+              <Link smooth to="/#contact" className="item">
+                Contact
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }

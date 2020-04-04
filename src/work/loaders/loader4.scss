@@ -1,44 +1,122 @@
-.loader-4 {
-  .loading {
-    text-align: center;
-  }
-  .loading span {
-    display: inline-block;
-    vertical-align: middle;
-    width: 18px;
-    height: 18px;
-    margin: 100px auto;
-    background: #e7eef2;
-    border-radius: 50px;
-    animation: loader4 2s infinite alternate;
-    animation-timing-function: ease-in-out;
-  }
+@import "../../vars.scss";
 
-  .loading span:nth-of-type(2) {
-    animation-delay: 0.4s;
-  }
-  .loading span:nth-of-type(3) {
-    animation-delay: 0.8s;
-  }
-  .loading span:nth-of-type(4) {
-    animation-delay: 1.2s;
-  }
-  .loading span:nth-of-type(5) {
-    animation-delay: 1.6s;
-  }
+.loader-wrap-4 {
+  $background: #eef4f7;
+  $dot1: #47c2b1;
+  $dot2: #082e48;
+  $line: darken($background, 10%);
 
-  @keyframes loader4 {
-    0% {
-      background: #e7eef2;
-      transform: scale(0.2) translatey(0px);
+  background: $background;
+
+  .loader-4 {
+    .loading,
+    .loading2 {
+      position: relative;
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      width: 260px;
+      height: 70px;
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        width: 11px;
+        height: 11px;
+        margin: -5px 0 0;
+        border-radius: 50%;
+        animation: loader4 2s infinite ease-in-out;
+        transform: rotate(-90deg);
+      }
     }
-    50% {
-      background: #47c2b1;
-      transform: scale(0.8) translatey(-30px);
+
+    .loading span {
+      background: $dot1;
     }
-    100% {
-      background: #e7eef2;
-      transform: scale(0.2) translatey(0px);
+
+    .loading2 {
+      margin-top: -70px;
+
+      span {
+        background: $dot2;
+      }
+    }
+
+    @for $i from 1 through 10 {
+      .loading span:nth-of-type(#{$i}) {
+        left: percentage($i * 0.1 - 0.1);
+        animation-delay: (-1s - ($i * 0.1));
+      }
+      .loading2 span:nth-of-type(#{$i}) {
+        left: percentage($i * 0.1 - 0.1);
+        animation-delay: (-2s - ($i * 0.1));
+      }
+    }
+
+    @keyframes loader4 {
+      0% {
+        top: 0%;
+        transform: scale(0.8);
+        z-index: 3;
+      }
+      25% {
+        transform: scale(1);
+        z-index: 4;
+      }
+      50% {
+        top: 100%;
+        transform: scale(0.8);
+        z-index: 3;
+      }
+      75% {
+        transform: scale(0.6);
+        z-index: 2;
+      }
+      100% {
+        top: 0%;
+        transform: scale(0.8);
+        z-index: 3;
+      }
+    }
+
+    .lines {
+      position: relative;
+      text-align: center;
+      display: block;
+      margin: -70px auto 0;
+      width: 260px;
+      height: 70px;
+
+      span {
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        z-index: 1;
+        width: 1px;
+        height: 74px;
+        margin-left: 5px;
+        background: $line;
+        animation: loader4lines 2s infinite ease-in-out;
+      }
+    }
+    @for $i from 1 through 10 {
+      .lines span:nth-of-type(#{$i}) {
+        left: percentage($i * 0.1 - 0.1);
+        animation-delay: (-1s - ($i * 0.1));
+      }
+    }
+
+    @keyframes loader4lines {
+      0% {
+        transform: scaleY(1);
+      }
+      50% {
+        transform: scaleY(-1);
+      }
+      100% {
+        transform: scaleY(1);
+      }
     }
   }
 }

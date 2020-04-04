@@ -4,6 +4,7 @@ import Carousel, { Modal, ModalGateway } from "react-images";
 import { Grid } from "../components/Grid/Grid.js";
 import Browse from "../components/Browse/Browse.js";
 import { photos } from "./lists/texadaWeb";
+import { motion } from "framer-motion";
 
 function TexadaWeb(props) {
   const [currentImage, setCurrentImage] = useState(0);
@@ -22,7 +23,11 @@ function TexadaWeb(props) {
   return (
     <>
       <Browse component="TexadaWeb" pos="top" />
-      <div className="panel">
+      <motion.div
+        className="panel"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
         <Grid>
           <Grid.Row className="middle-xs">
             <Grid.Col>
@@ -51,10 +56,10 @@ function TexadaWeb(props) {
                   <Modal onClose={closeLightbox}>
                     <Carousel
                       currentIndex={currentImage}
-                      views={photos.map(x => ({
+                      views={photos.map((x) => ({
                         ...x,
                         srcset: x.srcSet,
-                        caption: x.title
+                        caption: x.title,
                       }))}
                     />
                   </Modal>
@@ -63,7 +68,7 @@ function TexadaWeb(props) {
             </Grid.Col>
           </Grid.Row>
         </Grid>
-      </div>
+      </motion.div>
       <Browse component="TexadaWeb" pos="bottom" />
     </>
   );

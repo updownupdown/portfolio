@@ -49,7 +49,7 @@ interface ColProp {
 }
 
 // Row
-export const Row: React.FC<RowProp> = props => {
+export const Row: React.FC<RowProp> = (props) => {
   return (
     <div className={classNames("row", props.className)}>{props.children}</div>
   );
@@ -61,7 +61,7 @@ export const Spacer: React.FC<{ children?: never }> = () => {
 };
 
 // Column
-export const Col: React.FC<ColProp> = props => {
+export const Col: React.FC<ColProp> = (props) => {
   const colClasses = classNames(
     {
       col: true,
@@ -73,7 +73,7 @@ export const Col: React.FC<ColProp> = props => {
       [`col-xs-offset-${props.xsOffset}`]: props.xsOffset,
       [`col-sm-offset-${props.smOffset}`]: props.smOffset,
       [`col-md-offset-${props.mdOffset}`]: props.mdOffset,
-      [`col-lg-offset-${props.lgOffset}`]: props.lgOffset
+      [`col-lg-offset-${props.lgOffset}`]: props.lgOffset,
     },
     props.className
   );
@@ -84,11 +84,11 @@ export const Col: React.FC<ColProp> = props => {
 type IGrid = React.FC<GridProp> & {
   Col: typeof Col,
   Row: typeof Row,
-  Spacer: typeof Spacer
+  Spacer: typeof Spacer,
 };
 
 // Grid
-export const Grid: IGrid = props => {
+export const Grid: IGrid = (props) => {
   return (
     <div className={classNames("grid", props.className)}>{props.children}</div>
   );

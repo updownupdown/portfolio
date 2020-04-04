@@ -1,12 +1,17 @@
 import React from "react";
 import { Grid } from "../components/Grid/Grid.js";
 import Browse from "../components/Browse/Browse.js";
+import { motion } from "framer-motion";
 
 function Rebrand(props) {
   return (
     <>
       <Browse component="Rebrand" pos="top" />
-      <div className="panel">
+      <motion.div
+        className="panel"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+      >
         <Grid>
           <Grid.Row className="middle-xs">
             <Grid.Col xs={12} lg={5}>
@@ -98,7 +103,7 @@ function Rebrand(props) {
             </Grid.Col>
           </Grid.Row>
         </Grid>
-      </div>
+      </motion.div>
       <Browse component="Rebrand" pos="bottom" />
     </>
   );

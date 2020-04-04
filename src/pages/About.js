@@ -1,6 +1,5 @@
 import React from "react";
 import { Grid } from "../components/Grid/Grid.js";
-import "../components/Grid.scss";
 
 const resumeLink = "./resume/James_Carmichael_-_Resume_(Apr_2020).pdf";
 

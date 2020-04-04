@@ -31,22 +31,24 @@ function Photography(props) {
         <Grid>
           <Grid.Row>
             <Grid.Col>
-              <h3>Photos from Japan</h3>
-              <p>
-                The following photos were taken during a one month solo
-                backpacking trip in Japan in 2008, using a Nikon D80.
-              </p>
-              <p>
-                While I am no longer an active photographer, practicing the art
-                has greatly helped me in exploring universal design concepts
-                like contrast, colour, focus, as well as composition, balance,
-                proportion, and the interplay of foreground versus background,
-                etc.
-              </p>
-              <p>
-                It has also given me a deep appreciation for a world whose
-                beauty can be found anywhere.
-              </p>
+              <div className="textbox margin-bottom">
+                <h3>Photos from Japan</h3>
+                <p>
+                  The following photos were taken during a one month solo
+                  backpacking trip in Japan in 2008, using a Nikon D80.
+                </p>
+                <p>
+                  While I am no longer an active photographer, practicing the
+                  art has greatly helped me in exploring universal design
+                  concepts like contrast, colour, focus, as well as composition,
+                  balance, proportion, and the interplay of foreground versus
+                  background, etc.
+                </p>
+                <p>
+                  It has also given me a deep appreciation for a world whose
+                  beauty can be found anywhere.
+                </p>
+              </div>
 
               <Gallery photos={photos} onClick={openLightbox} />
               <ModalGateway>

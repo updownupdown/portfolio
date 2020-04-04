@@ -98,14 +98,14 @@ $columns: 12;
 // Sizes
 @include size(xs);
 
-@media (min-width: $break-sm) {
+@media #{$query-min-sm} {
   @include size(sm);
 }
 
-@media (min-width: $break-md) {
+@media #{$query-min-md} {
   @include size(md);
 }
 
-@media (min-width: $break-lg) {
+@media #{$query-min-lg} {
   @include size(lg);
 }

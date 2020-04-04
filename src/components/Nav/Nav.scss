@@ -25,7 +25,7 @@
   background: $opened-background;
 
   // Desktop
-  @media (min-width: 768px) {
+  @media #{$query-min-md} {
     backdrop-filter: blur(4px);
 
     &--not-top {
@@ -34,7 +34,7 @@
   }
 
   // Mobile
-  @media (max-width: 767px) {
+  @media #{$query-max-md} {
     &--not-top:not(.nav--open) {
       box-shadow: 0 0 12px rgba($K700, 0.12);
     }
@@ -51,15 +51,8 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    max-width: 100%;
+    max-width: 1200px;
     margin: auto;
-
-    @media (max-width: 767px) {
-      padding: 0 20px;
-    }
-    @media (min-width: 1240px) {
-      width: 1200px;
-    }
   }
 
   // "James Carmichael"
@@ -92,7 +85,7 @@
     }
 
     // Desktop
-    @media (min-width: 768px) {
+    @media #{$query-min-md} {
       margin-left: auto;
 
       a.item:not(:last-child) {
@@ -101,7 +94,7 @@
     }
 
     // Mobile
-    @media (max-width: 767px) {
+    @media #{$query-max-md} {
       position: fixed;
       top: $nav-height;
       left: 0;
@@ -122,7 +115,7 @@
       }
     }
   }
-  @media (max-width: 767px) {
+  @media #{$query-max-md} {
     &--closed .nav-menu {
       display: none;
     }
@@ -141,7 +134,7 @@
     width: 24px;
     height: $nav-height;
 
-    @media (min-width: 768px) {
+    @media #{$query-min-md} {
       display: none;
     }
 

@@ -8,6 +8,7 @@ export default class Nav extends Component {
 
     this.state = {
       top: true,
+      open: false,
     };
   }
 
@@ -30,27 +31,66 @@ export default class Nav extends Component {
     });
   };
 
+  toggleMenu = (value) => {
+    this.setState({ open: value });
+  };
+
   render() {
     return (
       <>
         <div
-          className={"nav" + (this.state.top ? " nav--top" : " nav--not-top")}
+          className={
+            "nav" +
+            (this.state.top ? " nav--top" : " nav--not-top") +
+            (this.state.open ? " nav--open" : " nav--closed")
+          }
         >
           <div className="nav-content">
             <Link to="/#top" className="nav-title">
               James Carmichael
             </Link>
+            <div
+              className="nav-hamburger"
+              onClick={() => this.toggleMenu(!this.state.open)}
+            >
+              <div>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
             <div className="nav-menu">
-              <Link smooth to="/#top" className="item">
+              <Link
+                smooth
+                to="/#top"
+                className="item"
+                onClick={() => this.toggleMenu(false)}
+              >
                 Home
               </Link>
-              <Link smooth to="/#work" className="item">
+              <Link
+                smooth
+                to="/#work"
+                className="item"
+                onClick={() => this.toggleMenu(false)}
+              >
                 Work
               </Link>
-              <Link smooth to="/#about" className="item">
+              <Link
+                smooth
+                to="/#about"
+                className="item"
+                onClick={() => this.toggleMenu(false)}
+              >
                 About
               </Link>
-              <Link smooth to="/#contact" className="item">
+              <Link
+                smooth
+                to="/#contact"
+                className="item"
+                onClick={() => this.toggleMenu(false)}
+              >
                 Contact
               </Link>
             </div>

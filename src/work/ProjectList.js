@@ -2,7 +2,7 @@ export const ProjectList = [
   {
     component: "TexadaWeb",
     link: "/texada/",
-    image: "./texada_web/Thumb.png",
+    image: "./images/thumbs/thumb-texada-web.png",
     title: "Texada Web App",
     description:
       "Showcase of some screens from the completely redesigned Texada web app.",
@@ -10,7 +10,7 @@ export const ProjectList = [
   {
     component: "Rebrand",
     link: "/rebrand/",
-    image: "./texada_rebrand/Thumb.png",
+    image: "./images/thumbs/thumb-rebrand.png",
     title: "Texada Rebrand",
     description:
       "Rebranding of Texada, including a new logo, style guide, marketing material, email signature, etc.",
@@ -26,7 +26,7 @@ export const ProjectList = [
   {
     component: "Websites",
     link: "/websites/",
-    image: "./websites/Thumb.png",
+    image: "./images/thumbs/thumb-websites.png",
     title: "Freelance Website Design",
     description:
       "Custom WordPress websites designed during my freelance years.",
@@ -34,7 +34,7 @@ export const ProjectList = [
   {
     component: "Photography",
     link: "/photography/",
-    image: "./photography/Thumb.png",
+    image: "./images/thumbs/thumb-photography.png",
     title: "Photography",
     description:
       "Photos taken with during a one month solo backpacking trip in Japan in 2008.",
@@ -42,7 +42,7 @@ export const ProjectList = [
   {
     component: "Loaders",
     link: "/loaders/",
-    image: "./images/loaders.png",
+    image: "./images/thumbs/thumb-loaders.png",
     title: "Fun with Dot Loaders!",
     description: "Experiments with dot loader CSS animations.",
   },

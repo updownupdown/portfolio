@@ -36,7 +36,7 @@ function Rebrand(props) {
             <Grid.Col xs={12} lg={7}>
               <img
                 className="spaced align-right"
-                src="/texada_rebrand/new-logo.png"
+                src="/images/texada_rebrand/new-logo.png"
                 alt="Updated Logo"
               />
             </Grid.Col>
@@ -45,7 +45,7 @@ function Rebrand(props) {
             <Grid.Col xs={12} lg={7}>
               <img
                 className="spaced"
-                src="/texada_rebrand/brand-shapes.png"
+                src="/images/texada_rebrand/brand-shapes.png"
                 alt="Branding Defining Style and Shapes"
               />
             </Grid.Col>
@@ -88,7 +88,7 @@ function Rebrand(props) {
             <Grid.Col xs={12} lg={7}>
               <img
                 className="spaced align-right"
-                src="/texada_rebrand/print-ads.png"
+                src="/images/texada_rebrand/print-ads.png"
                 alt="Print Advertising"
               />
             </Grid.Col>
@@ -97,7 +97,7 @@ function Rebrand(props) {
             <Grid.Col>
               <img
                 className="spaced"
-                src="/texada_rebrand/misc-marketing.png"
+                src="/images/texada_rebrand/misc-marketing.png"
                 alt="Marketing Collateral"
               />
             </Grid.Col>

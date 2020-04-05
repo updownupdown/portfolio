@@ -24,8 +24,8 @@ h6 {
 }
 
 h1 {
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 700;
   color: $K900;
 }
 
@@ -253,23 +253,62 @@ img {
 }
 
 // About
+#about {
+  position: relative;
+  z-index: 2;
+}
 .col-resume {
   text-align: center;
 }
 
 // Contact
-.contact-email {
-  line-height: 2;
-
-  @media #{$query-max-lg} {
-    font-size: 16px;
-  }
+#contact {
+  position: relative;
+  z-index: 1;
 }
+.contact-links {
+  display: flex;
+  flex-direction: column;
 
-.linkedin-link {
-  svg {
-    width: 30px;
-    height: 30px;
+  .contact-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    a,
+    span {
+      transition: 0.3s ease color;
+      font-size: 18px;
+      font-weight: 500;
+      color: $K600;
+    }
+
+    .svg-icon {
+      margin-right: 10px;
+
+      path {
+        transition: 0.3s ease fill;
+      }
+    }
+
+    &:hover {
+      a,
+      span {
+        color: $blue;
+      }
+
+      svg path {
+        fill: $blue;
+      }
+    }
+
+    @media #{$query-max-lg} {
+      font-size: 16px;
+    }
   }
 }
 
@@ -293,17 +332,133 @@ img {
   }
 }
 
-// Under Construction
-.under-construction {
-  display: block;
+// App Cards
+.app-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0 0;
+}
+.app-card-holder {
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  width: 120px;
+  height: 84px;
+
+  border-radius: 4px;
+}
+.app-card {
+  transition: 0.3s ease all;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  padding: 30px;
 
-  border-radius: 10px;
-  background: rgba(215, 84, 83, 0.04);
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  justify-items: center;
 
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-  color: rgb(215, 84, 83);
+  border-radius: 4px;
+
+  // Logo
+  &-logo {
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+  }
+
+  // Name
+  &-name {
+    transition: 0.3s ease all;
+    opacity: 0;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    margin: 10px 0 16px;
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    color: $K700;
+    text-align: center;
+  }
+
+  // Levels
+  &-levels {
+    transition: 0.3s ease all;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+
+    .level {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 2px 0;
+
+      .svg-icon {
+        margin-right: 8px;
+      }
+      &-bg {
+        position: relative;
+        flex: 1;
+        height: 8px;
+        background: $K150;
+        border-radius: 4px;
+      }
+      &-lvl {
+        transition: 1s ease all;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        border-radius: 4px;
+
+        &.lvl-1,
+        &.lvl-2,
+        &.lvl-3 {
+          background: #d75453;
+        }
+        &.lvl-4,
+        &.lvl-5,
+        &.lvl-6 {
+          background: #fccb30;
+        }
+        &.lvl-7,
+        &.lvl-8,
+        &.lvl-9,
+        &.lvl-10 {
+          background: #47c2b1;
+        }
+      }
+    }
+  }
+}
+
+// Hover
+.app-card-holder:hover {
+  z-index: 2;
+
+  .app-card {
+    background: $white;
+    box-shadow: $boxShadow300;
+  }
+
+  .app-card-name {
+    opacity: 1;
+  }
+
+  // Levels
+  .app-card-levels {
+    opacity: 1;
+
+    .level .level-lvl {
+      transform: scaleX(1);
+    }
+  }
 }

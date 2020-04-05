@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Grid } from "../../components/Grid/Grid.js";
 import { ProjectList } from "../../work/ProjectList.js";
-import ArrowBack from "./ArrowBack";
-import ArrowForward from "./ArrowForward";
+import ArrowBack from "../Icons/ArrowBack";
+import ArrowForward from "../Icons/ArrowForward";
 
 import { motion } from "framer-motion";
 
@@ -13,18 +13,18 @@ import "./Browse.scss";
 export default class Browse extends Component {
   static propTypes = {
     component: PropTypes.string.isRequired,
-    pos: PropTypes.string.isRequired
+    pos: PropTypes.string.isRequired,
   };
 
   static defaultProps = {
     component: "",
-    pos: ""
+    pos: "",
   };
 
   render() {
     // Find place in project list
     const index = ProjectList.findIndex(
-      x => x.component === this.props.component
+      (x) => x.component === this.props.component
     );
     const title = ProjectList[index].title;
 
@@ -39,7 +39,7 @@ export default class Browse extends Component {
       <div
         className={classNames("panel panel-grey panel-browse", {
           "panel-bottom-shadow": this.props.pos === "top",
-          "panel-top-shadow": this.props.pos === "bottom"
+          "panel-top-shadow": this.props.pos === "bottom",
         })}
       >
         <Grid>

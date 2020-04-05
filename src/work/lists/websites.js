@@ -1,98 +1,98 @@
 export const websites = [
   {
-    src: `/websites/desktop/aig.jpg`,
+    src: `/images/websites/desktop/aig.jpg`,
     width: 800,
-    height: 1211
+    height: 1211,
   },
   {
-    src: `/websites/desktop/veranova.jpg`,
+    src: `/images/websites/desktop/veranova.jpg`,
     width: 800,
-    height: 1211
+    height: 1211,
   },
   {
-    src: `/websites/desktop/foodbank.jpg`,
+    src: `/images/websites/desktop/foodbank.jpg`,
     width: 800,
-    height: 1211
+    height: 1211,
   },
   {
-    src: `/websites/desktop/aswr.jpg`,
+    src: `/images/websites/desktop/aswr.jpg`,
     width: 800,
-    height: 1600
+    height: 1600,
   },
   {
-    src: `/websites/desktop/brian-limoyo.jpg`,
+    src: `/images/websites/desktop/brian-limoyo.jpg`,
     width: 800,
-    height: 1600
+    height: 1600,
   },
 
   {
-    src: `/websites/desktop/chervin.jpg`,
+    src: `/images/websites/desktop/chervin.jpg`,
     width: 800,
-    height: 1211
+    height: 1211,
   },
   {
-    src: `/websites/desktop/gbl.jpg`,
+    src: `/images/websites/desktop/gbl.jpg`,
     width: 800,
-    height: 1600
+    height: 1600,
   },
   {
-    src: `/websites/desktop/client.jpg`,
+    src: `/images/websites/desktop/client.jpg`,
     width: 800,
-    height: 1600
+    height: 1600,
   },
   {
-    src: `/websites/desktop/cora.jpg`,
+    src: `/images/websites/desktop/cora.jpg`,
     width: 800,
-    height: 1600
+    height: 1600,
   },
   {
-    src: `/websites/desktop/dalton.jpg`,
+    src: `/images/websites/desktop/dalton.jpg`,
     width: 800,
-    height: 1600
+    height: 1600,
   },
   {
-    src: `/websites/desktop/ewr.jpg`,
+    src: `/images/websites/desktop/ewr.jpg`,
     width: 800,
-    height: 1211
+    height: 1211,
   },
   {
-    src: `/websites/desktop/delft-blue.jpg`,
+    src: `/images/websites/desktop/delft-blue.jpg`,
     width: 800,
-    height: 1600
+    height: 1600,
   },
   {
-    src: `/websites/desktop/eaf.jpg`,
+    src: `/images/websites/desktop/eaf.jpg`,
     width: 800,
-    height: 1211
+    height: 1211,
   },
   {
-    src: `/websites/desktop/gcp-surloc.jpg`,
+    src: `/images/websites/desktop/gcp-surloc.jpg`,
     width: 800,
-    height: 1600
+    height: 1600,
   },
   {
-    src: `/websites/desktop/ginkgo.jpg`,
+    src: `/images/websites/desktop/ginkgo.jpg`,
     width: 800,
-    height: 1600
+    height: 1600,
   },
   {
-    src: `/websites/desktop/job-runner.jpg`,
+    src: `/images/websites/desktop/job-runner.jpg`,
     width: 800,
-    height: 1211
+    height: 1211,
   },
   {
-    src: `/websites/desktop/royal.jpg`,
+    src: `/images/websites/desktop/royal.jpg`,
     width: 800,
-    height: 1600
+    height: 1600,
   },
   {
-    src: `/websites/desktop/chamber.jpg`,
+    src: `/images/websites/desktop/chamber.jpg`,
     width: 800,
-    height: 1600
+    height: 1600,
   },
   {
-    src: `/websites/desktop/transit-lube.jpg`,
+    src: `/images/websites/desktop/transit-lube.jpg`,
     width: 800,
-    height: 1600
-  }
+    height: 1600,
+  },
 ];

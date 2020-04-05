@@ -33,17 +33,17 @@ function TexadaWeb(props) {
             <Grid.Col>
               <img
                 className="spaced shadowed"
-                src="/texada_web/ticket_scheduling.png"
+                src="/images/texada_web/ticket_scheduling.png"
                 alt="Ticket Scheduling"
               />
               <img
                 className="spaced"
-                src="/texada_web/nav.png"
+                src="/images/texada_web/nav.png"
                 alt="Texada Navigation Menu"
               />
               <img
                 className="spaced shadowed"
-                src="/texada_web/tickets_list.png"
+                src="/images/texada_web/tickets_list.png"
                 alt="Tickets List"
               />
             </Grid.Col>

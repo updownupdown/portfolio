@@ -18,7 +18,7 @@ export const ProjectList = [
   {
     component: "Components",
     link: "/components/",
-    image: "./components/Thumb.png",
+    image: "./images/thumbs/thumb-components.png",
     title: "Texada Component Library",
     description:
       "A preview of the redesigned and consolidated component library used across two web apps.",

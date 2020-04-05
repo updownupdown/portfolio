@@ -33,15 +33,6 @@ h2 {
   font-size: 28px;
   font-weight: 600;
   color: $K900;
-
-  .lighter {
-    color: $K600;
-    font-weight: 400;
-  }
-  .darker {
-    color: $K900;
-    font-weight: 700;
-  }
 }
 
 h3 {
@@ -188,11 +179,24 @@ img {
   }
 
   &-intro {
-    padding-top: 100px;
-    padding-bottom: 0;
+    padding: 80px 0;
+
+    h2 {
+      font-size: 32px;
+
+      .lighter {
+        font-size: 26px;
+        color: $K600;
+        font-weight: 400;
+      }
+      .darker {
+        color: $K900;
+        font-weight: 700;
+      }
+    }
 
     @media #{$query-max-md} {
-      padding-top: 80px;
+      padding: 60px 0;
       text-align: center;
     }
 

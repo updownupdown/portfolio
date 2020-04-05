@@ -25,7 +25,7 @@ function Components(props) {
                 </div>
               </Grid.Col>
               <Grid.Col xs={12}>
-                <img src="/components/buttons.png" alt="Button styles" />
+                <img src="/images/components/buttons.png" alt="Button styles" />
               </Grid.Col>
             </Grid.Row>
           </Grid>
@@ -35,7 +35,7 @@ function Components(props) {
           <Grid>
             <Grid.Row>
               <Grid.Col xs={12}>
-                <img src="/components/aggrid.png" alt="ag-Grid Table" />
+                <img src="/images/components/aggrid.png" alt="ag-Grid Table" />
               </Grid.Col>
             </Grid.Row>
           </Grid>
@@ -50,7 +50,7 @@ function Components(props) {
               </Grid.Col>
               <Grid.Col xs={12}>
                 <img
-                  src="/components/toggles.png"
+                  src="/images/components/toggles.png"
                   alt="Toggles, radio buttons, checkboxes, alerts and tooltips"
                 />
               </Grid.Col>
@@ -86,7 +86,7 @@ function Components(props) {
               <Grid.Col xs={12}>
                 <img
                   className="align-center"
-                  src="/components/pagination.png"
+                  src="/images/components/pagination.png"
                   alt="Pagination component"
                 />
               </Grid.Col>
@@ -117,7 +117,7 @@ function Components(props) {
                 </div>
               </Grid.Col>
               <Grid.Col xs={12}>
-                <img src="/components/inputs.png" alt="Inputs" />
+                <img src="/images/components/inputs.png" alt="Inputs" />
               </Grid.Col>
             </Grid.Row>
           </Grid>
@@ -128,7 +128,7 @@ function Components(props) {
             <Grid.Row>
               <Grid.Col xs={12}>
                 <img
-                  src="/components/panels.png"
+                  src="/images/components/panels.png"
                   alt="Panels, tabs, accordions, and modals"
                 />
               </Grid.Col>
@@ -161,7 +161,10 @@ function Components(props) {
                 </div>
               </Grid.Col>
               <Grid.Col xs={12}>
-                <img src="/components/search.png" alt="Search input types" />
+                <img
+                  src="/images/components/search.png"
+                  alt="Search input types"
+                />
               </Grid.Col>
             </Grid.Row>
           </Grid>

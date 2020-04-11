@@ -231,4 +231,13 @@ img {
       transform: scale(0.85);
     }
   }
+
+  .panel-web-app-extras & img {
+    transform: scale(0.8);
+    box-shadow: $boxShadow600;
+
+    &:hover {
+      transform: scale(0.85);
+    }
+  }
 }

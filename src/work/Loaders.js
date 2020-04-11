@@ -12,6 +12,22 @@ function Loaders(props) {
         <div className="panel">
           <Grid>
             <Grid.Row>
+              <Grid.Col>
+                <div className="textbox">
+                  <h3>Fun with Dot Loaders!</h3>
+                  <p>
+                    While designing a loading animation for the Texada web app,
+                    I started playing around with different ways to animate a
+                    series of dots, and kind of got carried away. While I
+                    ultimately settled for a more conservative loading
+                    animation, these are some of the resulting experiments.
+                    <br />
+                    <br />
+                  </p>
+                </div>
+              </Grid.Col>
+            </Grid.Row>
+            <Grid.Row>
               <Grid.Col xs={12}>
                 <div className="loader-wrap loader-wrap-1">
                   <div className="loader loader-1">

@@ -5,11 +5,6 @@ export const photos = [
     height: 2017,
   },
   {
-    src: `/images/texada_web/menu_ba.png`,
-    width: 590,
-    height: 500,
-  },
-  {
     src: `/images/texada_web/ticket_single.png`,
     width: 1340,
     height: 1738,
@@ -38,11 +33,6 @@ export const photos = [
     src: `/images/texada_web/wo_create.png`,
     width: 1338,
     height: 1118,
-  },
-  {
-    src: `/images/texada_web/wo_list_ba.png`,
-    width: 1200,
-    height: 398,
   },
   {
     src: `/images/texada_web/wo_scheduling.png`,

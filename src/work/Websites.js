@@ -39,6 +39,30 @@ function Websites(props) {
         <Grid className="grid-websites">
           <Grid.Row>
             <Grid.Col>
+              <div className="textbox">
+                <h3>WordPress Themes</h3>
+                <p>
+                  The following websites were custom designed and coded to fit
+                  the needs of each customer. Most were made in collaboration
+                  with a local marketing agency. As a freelancer, it was
+                  important for me to be involved in every step of the project,
+                  from early client meetings, internal strategy sessions,
+                  project management, to post-launch maintenance.
+                </p>
+                <p>
+                  A system of modular panels were developed to be used across
+                  multiple projects. The panels were built around user editable
+                  fields which were carefully constrained to make the process as
+                  fool proof as possible while still giving flexibilty to users
+                  to customer their website. A set of default panels could be
+                  easily included with every project, in addition to custom
+                  panels made for each separate website.
+                </p>
+              </div>
+            </Grid.Col>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Col>
               <Gallery
                 photos={websites}
                 onClick={openLightbox}

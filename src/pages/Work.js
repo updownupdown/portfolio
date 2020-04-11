@@ -9,7 +9,7 @@ function Work(props) {
   return (
     <div id="work" className="panel">
       <Grid>
-        <Grid.Row className="center-xs">
+        <Grid.Row>
           {ProjectList.map((work) => (
             <Thumb
               key={work.component}

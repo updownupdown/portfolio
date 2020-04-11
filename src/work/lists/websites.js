@@ -5,6 +5,11 @@ export const websites = [
     height: 1211,
   },
   {
+    src: `/images/websites/desktop/gbl.jpg`,
+    width: 800,
+    height: 1600,
+  },
+  {
     src: `/images/websites/desktop/veranova.jpg`,
     width: 800,
     height: 1211,
@@ -24,21 +29,10 @@ export const websites = [
     width: 800,
     height: 1600,
   },
-
   {
     src: `/images/websites/desktop/chervin.jpg`,
     width: 800,
     height: 1211,
-  },
-  {
-    src: `/images/websites/desktop/gbl.jpg`,
-    width: 800,
-    height: 1600,
-  },
-  {
-    src: `/images/websites/desktop/client.jpg`,
-    width: 800,
-    height: 1600,
   },
   {
     src: `/images/websites/desktop/cora.jpg`,
@@ -81,17 +75,7 @@ export const websites = [
     height: 1211,
   },
   {
-    src: `/images/websites/desktop/royal.jpg`,
-    width: 800,
-    height: 1600,
-  },
-  {
     src: `/images/websites/desktop/chamber.jpg`,
-    width: 800,
-    height: 1600,
-  },
-  {
-    src: `/images/websites/desktop/transit-lube.jpg`,
     width: 800,
     height: 1600,
   },

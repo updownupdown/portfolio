@@ -1,29 +1,51 @@
 @import "../../vars.scss";
 
 .thumb {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  // padding-left: 20px;
+  // padding-right: 20px;
 
-  &:not(first-child) {
-    padding-top: 40px;
-  }
-  &:not(last-child) {
-    padding-bottom: 40px;
+  .thumb-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(first-child) {
+      padding-top: 40px;
+    }
+    &:not(last-child) {
+      padding-bottom: 40px;
+    }
+
+    // Desktop
+    @media #{$query-min-lg} {
+      flex-direction: row;
+    }
+    // Mobile
+    @media #{$query-max-lg} {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
-  // Spacer
-  &-spacer {
-    display: block;
-    margin: 0;
+  // Text
+  &-text {
+    width: 500px;
+    max-width: 100%;
+
+    // Desktop
+    @media #{$query-min-lg} {
+      padding-left: 60px;
+    }
   }
 
   // Image
   &-image {
-    margin: 0 auto 30px;
+    @media #{$query-min-lg} {
+      // order: 2;
+    }
+    @media #{$query-max-lg} {
+      margin-bottom: 30px;
+    }
   }
   &-image-plain {
     transition: 0.3s ease opacity;
@@ -48,11 +70,11 @@
 
   // Description
   &-description {
-    max-width: 320px;
+    // max-width: 400px;
   }
 
   // Button
   .button {
-    align-self: center;
+    // align-self: center;
   }
 }

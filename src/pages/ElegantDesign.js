@@ -10,11 +10,11 @@ const designTypes = [
     heading: "beautiful",
     content: (
       <p>
-        Beauty is achieved
+        Beauty is observed
         <br />
-        Through effortless harmony
+        When harmony effortless
         <br />
-        SVGs icons.
+        And crips SVGs.
       </p>
     ),
   },
@@ -36,9 +36,9 @@ const designTypes = [
       <p>
         Evolve and adapt
         <br />
-        Support people and their tools
+        Support people and their ways
         <br />
-        Maybe not IE.
+        Except IE 9.
       </p>
     ),
   },
@@ -46,11 +46,11 @@ const designTypes = [
     heading: "intuitive",
     content: (
       <p>
-        Knowing what things do
+        Everything makes sense
         <br />
         Without prior experience
         <br />
-        Tooltips never hurt.
+        Tooltips just in case.
       </p>
     ),
   },

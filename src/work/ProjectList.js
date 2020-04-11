@@ -88,7 +88,7 @@ export const ProjectList = [
   {
     component: "Loaders",
     link: "/loaders/",
-    title: "Fun with Dot Loaders!",
+    title: "Loading Animations",
     description: "Experiments with dot loader CSS animations.",
     content: (
       <div className="thumb-loaders">

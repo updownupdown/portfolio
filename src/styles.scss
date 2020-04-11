@@ -42,11 +42,15 @@ h3 {
 }
 
 p {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   font-size: 15px;
   font-weight: 400;
   line-height: 1.8;
   color: $K900;
+
+  @media #{$query-max-lg} {
+    font-size: 17px;
+  }
 }
 
 a {

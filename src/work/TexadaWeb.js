@@ -112,7 +112,7 @@ function TexadaWeb(props) {
         <div className="panel">
           <Grid>
             <Grid.Row className="middle-xs">
-              <Grid.Col>
+              <Grid.Col xs={12} lg={6}>
                 <div className="textbox">
                   <h3>Sidebar Navigation</h3>
                   <p>
@@ -143,7 +143,7 @@ function TexadaWeb(props) {
                   </p>
                 </div>
               </Grid.Col>
-              <Grid.Col className="center-xs">
+              <Grid.Col className="center-xs" xs={12} lg={6}>
                 <img
                   className="align-center"
                   src="/images/texada_web/sidebar-ba.png"

@@ -12,7 +12,7 @@ const designTypes = [
       <p>
         Beauty is observed
         <br />
-        When harmony effortless
+        As effortless harmony
         <br />
         And crips SVGs.
       </p>
@@ -26,7 +26,7 @@ const designTypes = [
         <br />
         Are the greatest things achieved
         <br />
-        That's too many clicks.
+        Avoid useless clicks.
       </p>
     ),
   },
@@ -72,7 +72,7 @@ const designTypes = [
       <p>
         Overcome limits,
         <br />
-        By blending many skillsets,
+        Blending people, skills, passions,
         <br />
         And Stack Overflow.
       </p>
@@ -94,11 +94,23 @@ const designTypes = [
     heading: "fun",
     content: (
       <p>
-        Fluid useflows
+        Use Figma all day
         <br />
-        Fine tuning the CSS
+        Clean and polish CSS
         <br />
         Transition ease all.
+      </p>
+    ),
+  },
+  {
+    heading: "balanced",
+    content: (
+      <p>
+        Bestowing white space
+        <br />
+        Heed excess, follow reason
+        <br />
+        User screens are small.
       </p>
     ),
   },

@@ -167,6 +167,11 @@
       font-size: 22px;
       margin: 10px 0;
       font-style: italic;
+
+      @media #{$query-max-lg} {
+        font-size: 18px;
+        text-align: center;
+      }
     }
 
     // Mobile - LG

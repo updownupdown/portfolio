@@ -10,11 +10,11 @@ const designTypes = [
     heading: "beautiful",
     content: (
       <p>
-        Beauty is observed
+        Seek highest beauty
         <br />
-        As effortless harmony
+        In effortless harmony
         <br />
-        And crips SVGs.
+        And crisp SVGs.
       </p>
     ),
   },

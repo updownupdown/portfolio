@@ -1,9 +1,6 @@
 @import "../../vars.scss";
 
 .thumb {
-  // padding-left: 20px;
-  // padding-right: 20px;
-
   .thumb-wrap {
     display: flex;
     justify-content: center;
@@ -66,15 +63,5 @@
   &-title {
     font-size: 18px;
     margin-bottom: 8px;
-  }
-
-  // Description
-  &-description {
-    // max-width: 400px;
-  }
-
-  // Button
-  .button {
-    // align-self: center;
   }
 }

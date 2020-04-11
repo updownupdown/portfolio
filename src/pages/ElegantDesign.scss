@@ -24,6 +24,10 @@
     @media #{$query-max-lg} {
       margin: 0 auto;
     }
+    // Desktop
+    @media #{$query-min-lg} {
+      flex-basis: 60%;
+    }
 
     h2 {
       font-weight: 700;
@@ -160,8 +164,9 @@
     display: flex;
 
     p {
-      font-size: 18px;
+      font-size: 22px;
       margin: 10px 0;
+      font-style: italic;
     }
 
     // Mobile - LG
@@ -176,7 +181,7 @@
     }
     // Desktop
     @media #{$query-min-lg} {
-      flex-basis: 300px;
+      flex-basis: 40%;
       flex-grow: 1;
       align-items: center;
     }

@@ -78,14 +78,14 @@
     }
 
     span {
-      font-size: 17px;
+      font-size: 14px;
       font-weight: 600;
     }
 
     .svg-icon {
       margin-bottom: 10px;
-      width: 30px;
-      height: 30px;
+      width: 42px;
+      height: 42px;
 
       path {
         transition: 0.3s ease fill;
@@ -99,10 +99,6 @@
       svg path {
         fill: $blueHover;
       }
-    }
-
-    @media #{$query-max-lg} {
-      font-size: 16px;
     }
   }
 }

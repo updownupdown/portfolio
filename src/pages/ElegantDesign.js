@@ -10,11 +10,11 @@ const designTypes = [
     heading: "beautiful",
     content: (
       <p>
-        Recognize beauty
+        Beauty is achieved
         <br />
         Through effortless harmony
         <br />
-        The new nav looks sweet.
+        SVGs icons.
       </p>
     ),
   },
@@ -36,9 +36,9 @@ const designTypes = [
       <p>
         Evolve and adapt
         <br />
-        With time and situations
+        Support people and their tools
         <br />
-        So glad IE's dead.
+        Maybe not IE.
       </p>
     ),
   },
@@ -46,11 +46,11 @@ const designTypes = [
     heading: "intuitive",
     content: (
       <p>
-        I know where I am
+        Knowing what things do
         <br />
-        And what everything will do
+        Without prior experience
         <br />
-        Without doing it.
+        Tooltips never hurt.
       </p>
     ),
   },
@@ -58,11 +58,11 @@ const designTypes = [
     heading: "informed",
     content: (
       <p>
-        Measure everything,
+        Learn and ask feedback,
         <br />
-        Understand the why and how
+        Test designs with real users
         <br />
-        You're probably wrong.
+        Tim Hortons gift cards.
       </p>
     ),
   },
@@ -72,9 +72,9 @@ const designTypes = [
       <p>
         Overcome limits,
         <br />
-        Combining skills and backgrounds,
+        By blending many skillsets,
         <br />
-        Steve knows python best.
+        And Stack Overflow.
       </p>
     ),
   },
@@ -84,9 +84,21 @@ const designTypes = [
       <p>
         Design like nature,
         <br />
-        They are one process,-----
+        Universal principles
         <br />
-        They are one process.
+        Transferable skills.
+      </p>
+    ),
+  },
+  {
+    heading: "fun",
+    content: (
+      <p>
+        Fluid useflows
+        <br />
+        Fine tuning the CSS
+        <br />
+        Transition ease all.
       </p>
     ),
   },

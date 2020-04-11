@@ -20,9 +20,29 @@
     }
   }
 
-  @media #{$query-max-md} {
+  @media #{$query-max-xl} {
+    h1 {
+      font-size: 38px;
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+  }
+  @media #{$query-max-lg} {
     padding: 60px 0;
     text-align: center;
+  }
+  @media #{$query-max-md} {
+    padding: 60px 0 20px;
+
+    h1 {
+      font-size: 28px;
+    }
+
+    h2 {
+      font-size: 15px;
+    }
   }
 
   .row {
@@ -32,6 +52,11 @@
   }
 
   img {
-    margin-left: auto;
+    @media #{$query-min-lg} {
+      margin-left: auto;
+    }
+    @media #{$query-max-lg} {
+      margin: 30px auto 0;
+    }
   }
 }

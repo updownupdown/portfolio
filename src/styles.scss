@@ -245,3 +245,18 @@ img {
     }
   }
 }
+
+// Rebrand
+.rebrand-logo-container {
+  padding: 60px 0;
+  background: #272f36;
+
+  img {
+    max-width: 60%;
+    height: auto;
+  }
+
+  @media #{$query-max-lg} {
+    margin-bottom: 60px;
+  }
+}

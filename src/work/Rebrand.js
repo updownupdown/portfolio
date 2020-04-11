@@ -35,20 +35,24 @@ function Rebrand(props) {
             </Grid.Col>
             <Grid.Col xs={12} lg={7}>
               <img
-                className="spaced align-right"
+                className="spaced align-center"
                 src="/images/texada_rebrand/new-logo.png"
                 alt="Updated Logo"
               />
             </Grid.Col>
           </Grid.Row>
-          <Grid.Row className="middle-xs">
-            <Grid.Col xs={12} lg={7}>
-              <img
-                className="spaced"
-                src="/images/texada_rebrand/brand-shapes.png"
-                alt="Branding Defining Style and Shapes"
-              />
+          <Grid.Row>
+            <Grid.Col>
+              <div className="rebrand-logo-container">
+                <img
+                  className="spaced align-center"
+                  src="/images/texada_rebrand/texada-logo-white.png"
+                  alt="Texada logo"
+                />
+              </div>
             </Grid.Col>
+          </Grid.Row>
+          <Grid.Row className="middle-xs">
             <Grid.Col xs={12} lg={5}>
               <div className="textbox">
                 <h3>Shapes &amp; Symbols</h3>
@@ -70,6 +74,13 @@ function Rebrand(props) {
                 </p>
               </div>
             </Grid.Col>
+            <Grid.Col xs={12} lg={7}>
+              <img
+                className="spaced align-center"
+                src="/images/texada_rebrand/brand-shapes.png"
+                alt="Branding Defining Style and Shapes"
+              />
+            </Grid.Col>
           </Grid.Row>
 
           <Grid.Row className="middle-xs">
@@ -87,17 +98,24 @@ function Rebrand(props) {
             </Grid.Col>
             <Grid.Col xs={12} lg={7}>
               <img
-                className="spaced align-right"
+                className="spaced align-center"
                 src="/images/texada_rebrand/print-ads.png"
                 alt="Print Advertising"
               />
             </Grid.Col>
           </Grid.Row>
-          <Grid.Row>
-            <Grid.Col>
+          <Grid.Row className="middle-xs">
+            <Grid.Col xs={12} lg={6}>
               <img
-                className="spaced"
+                className="spaced align-center"
                 src="/images/texada_rebrand/misc-marketing.png"
+                alt="Marketing Collateral"
+              />
+            </Grid.Col>
+            <Grid.Col xs={12} lg={6}>
+              <img
+                className="spaced align-center"
+                src="/images/texada_rebrand/website.png"
                 alt="Marketing Collateral"
               />
             </Grid.Col>

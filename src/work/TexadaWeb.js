@@ -29,7 +29,7 @@ function TexadaWeb(props) {
             <Grid.Row className="middle-xs">
               <Grid.Col xs={12} lg={5}>
                 <div className="textbox">
-                  <h3>The Redesign</h3>
+                  <h3>App Redesign</h3>
                   <p>
                     When I came to Texada, the design process lacked credibility
                     and was considered secondary to features and expediency. The

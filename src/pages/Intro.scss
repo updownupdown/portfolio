@@ -1,0 +1,37 @@
+@import "../styles.scss";
+
+// Intro
+.panel.panel-intro {
+  padding: 120px 0 30px;
+
+  h1 {
+    font-size: 42px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 1.4;
+
+    &,
+    a {
+      font-weight: 700;
+    }
+  }
+
+  @media #{$query-max-md} {
+    padding: 60px 0;
+    text-align: center;
+  }
+
+  .row {
+    height: 100%;
+    display: flex;
+    align-content: center;
+  }
+
+  img {
+    margin-left: auto;
+  }
+}

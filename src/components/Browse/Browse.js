@@ -63,6 +63,7 @@ export default class Browse extends Component {
                     </motion.h1>
                   </div>
                 )}
+
                 {this.props.pos === "bottom" && (
                   <div className="browse-heading-group">
                     <h4 className="browse-heading-more">Browse Projects</h4>

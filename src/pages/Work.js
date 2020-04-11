@@ -3,6 +3,8 @@ import Thumb from "../components/Thumb/Thumb";
 import { Grid } from "../components/Grid/Grid";
 import { ProjectList } from "../work/ProjectList";
 
+import "./Work.scss";
+
 function Work(props) {
   return (
     <div id="work" className="panel">
@@ -15,7 +17,9 @@ function Work(props) {
               image={work.image}
               title={work.title}
               description={work.description}
-            />
+            >
+              {work.content}
+            </Thumb>
           ))}
         </Grid.Row>
       </Grid>

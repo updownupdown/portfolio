@@ -4,22 +4,32 @@ import Obfuscate from "react-obfuscate";
 import Email from "../components/Icons/Email";
 import Linkedin from "../components/Icons/Linkedin";
 
+import "./Contact.scss";
+
 function Contact(props) {
   return (
-    <div id="contact" className="panel">
+    <div id="contact" className="panel panel-grey panel-top-shadow">
       <Grid>
         <Grid.Row className="middle-xs">
-          <Grid.Col xs={12} lg={6}>
-            <h1>Contact</h1>
+          <Grid.Col>
             <div className="contact-links">
-              <span className="contact-link">
-                <Obfuscate email="updownupdown@gmail.com">
-                  <Email />
-                </Obfuscate>
-                <Obfuscate email="updownupdown@gmail.com" />
-              </span>
+              <img
+                className="contact-image"
+                src="/images/home/james-photo.png"
+                alt="James Carmichael"
+              />
+
+              <Obfuscate
+                className="contact-link contact-link-email"
+                email="updownupdown@gmail.com"
+                obfuscateChildren={false}
+              >
+                <Email />
+                <span>Email</span>
+              </Obfuscate>
+
               <a
-                className="contact-link"
+                className="contact-link contact-link-linkedin"
                 href="https://www.linkedin.com/in/james-carmichael-2796b3b6/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -28,9 +38,6 @@ function Contact(props) {
                 <span>LinkedIn</span>
               </a>
             </div>
-          </Grid.Col>
-          <Grid.Col xs={12} lg={6}>
-            <img src="/images/james-photo.jpg" alt="James Carmichael" />
           </Grid.Col>
         </Grid.Row>
       </Grid>

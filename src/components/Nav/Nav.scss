@@ -9,11 +9,12 @@
 // Nav
 .nav {
   $nav-height: 60px;
-  $opened-background: rgba($K100, 0.94);
+  $background: rgba($K100, 0.9);
+  $opened-background: $K100;
 
   transition: 0.9s ease box-shadow;
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,10 +23,9 @@
   height: $nav-height;
   padding: 0 20px;
 
-  background: $opened-background;
-
   // Desktop
   @media #{$query-min-md} {
+    background: $background;
     backdrop-filter: blur(4px);
 
     &--not-top {
@@ -35,7 +35,10 @@
 
   // Mobile
   @media #{$query-max-md} {
+    background: $opened-background;
+
     &--not-top:not(.nav--open) {
+      background: $background;
       box-shadow: 0 0 12px rgba($K700, 0.12);
     }
 
@@ -57,6 +60,7 @@
 
   // "James Carmichael"
   .nav-title {
+    transition: unset;
     position: absolute;
     display: flex;
     align-items: center;
@@ -64,12 +68,51 @@
     left: 0;
     height: 100%;
 
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 700;
-    color: $K900;
+    line-height: 1;
+    color: $K950;
+
+    .jc-link {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      min-width: 180px;
+
+      span {
+        transition: 0.3s ease all;
+        overflow: hidden;
+        display: inline-block;
+      }
+    }
+
+    .jc-link-c {
+      margin-left: -5px;
+    }
+
+    .jc-link-ames,
+    .jc-link-armichael {
+      font-size: 14px;
+      font-weight: 500;
+      max-width: 0;
+      opacity: 0.3;
+      padding-bottom: 2px;
+      transform-origin: left center;
+    }
 
     &:hover {
-      color: $blue;
+      .jc-link span {
+        color: $blue;
+      }
+
+      .jc-link-c {
+        margin-left: 6px;
+      }
+      .jc-link-ames,
+      .jc-link-armichael {
+        max-width: 100px;
+        opacity: 1;
+      }
     }
   }
 
@@ -77,7 +120,8 @@
   .nav-menu {
     a.item {
       font-size: 14px;
-      color: $K600;
+      color: rgba($K950, 0.6);
+      font-weight: 600;
 
       &:hover {
         color: $blue;
@@ -141,7 +185,7 @@
     div {
       position: relative;
       width: 24px;
-      height: 16px;
+      height: 12px;
 
       span {
         transition: 0.3s ease all;

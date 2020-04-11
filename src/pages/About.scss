@@ -1,0 +1,175 @@
+@import "../styles.scss";
+
+// About
+#about {
+  position: relative;
+  z-index: 20;
+}
+.col-resume {
+  text-align: center;
+}
+.resume-img-link {
+  position: relative;
+  display: inline-block;
+  margin: 30px 0;
+
+  img {
+    transition: 0.6s ease all;
+    width: 250px;
+    height: auto;
+    box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.04);
+  }
+
+  // Page 1
+  img:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(-5deg);
+    transform-origin: bottom left;
+  }
+  &:hover img:last-child {
+    transform: translateX(-50%) translateX(-4px) translateY(-50%)
+      translateY(-2px) rotate(-7deg);
+  }
+
+  // Page 2
+  img:first-child {
+    transform: translate(-26px, 4px) rotate(10deg);
+    transform-origin: bottom right;
+  }
+  &:hover img:first-child {
+    transform: translate(-20px, 6px) rotate(12deg);
+  }
+}
+
+// App Cards
+.app-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 0 10px;
+}
+.app-card-holder {
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  width: 120px;
+  height: 84px;
+
+  border-radius: 4px;
+}
+.app-card {
+  transition: 0.3s ease all;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  justify-items: center;
+
+  border-radius: 4px;
+
+  // Logo
+  &-logo {
+    display: block;
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+  }
+
+  // Name
+  &-name {
+    transition: 0.3s ease all;
+    opacity: 0;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    margin: 10px 0 16px;
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1;
+    color: $K700;
+    text-align: center;
+  }
+
+  // Levels
+  &-levels {
+    transition: 0.3s ease all;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+
+    .level {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 2px 0;
+
+      .svg-icon {
+        margin-right: 8px;
+      }
+      &-bg {
+        position: relative;
+        flex: 1;
+        height: 8px;
+        background: $K150;
+        border-radius: 4px;
+      }
+      &-lvl {
+        transition: 1s ease all;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: scaleX(0);
+        transform-origin: left;
+        border-radius: 4px;
+
+        &.lvl-1,
+        &.lvl-2,
+        &.lvl-3 {
+          background: #d75453;
+        }
+        &.lvl-4,
+        &.lvl-5,
+        &.lvl-6 {
+          background: #fccb30;
+        }
+        &.lvl-7,
+        &.lvl-8,
+        &.lvl-9,
+        &.lvl-10 {
+          background: #47c2b1;
+        }
+      }
+    }
+  }
+}
+
+// Hover
+.app-card-holder:hover {
+  z-index: 2;
+
+  .app-card {
+    background: $white;
+    box-shadow: $boxShadow300;
+  }
+
+  .app-card-name {
+    opacity: 1;
+  }
+
+  // Levels
+  .app-card-levels {
+    opacity: 1;
+
+    .level .level-lvl {
+      transform: scaleX(1);
+    }
+  }
+}

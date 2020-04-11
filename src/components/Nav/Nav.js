@@ -47,7 +47,12 @@ export default class Nav extends Component {
         >
           <div className="nav-content">
             <Link to="/#top" className="nav-title">
-              James Carmichael
+              <span className="jc-link">
+                <span className="jc-link-j">J</span>
+                <span className="jc-link-ames">ames</span>
+                <span className="jc-link-c">C</span>
+                <span className="jc-link-armichael">armichael</span>
+              </span>
             </Link>
             <div
               className="nav-hamburger"

@@ -8,12 +8,18 @@ function Thumb(props) {
   return (
     <Grid.Col className="thumb" xs={12} lg={6}>
       <a className="thumb-image" href={props.link}>
-        {props.image && <img src={props.image} alt={props.title} />}
+        {props.image && (
+          <img
+            className="thumb-image-plain"
+            src={props.image}
+            alt={props.title}
+          />
+        )}
         {props.children}
       </a>
       <h3 className="thumb-title">{props.title}</h3>
       <p className="thumb-description">{props.description}</p>
-      <Link to={props.link} className="button button-outline">
+      <Link to={props.link} className="button">
         View
       </Link>
     </Grid.Col>

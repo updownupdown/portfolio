@@ -4,7 +4,9 @@ import Enjoyment from "../components/Icons/Enjoyment";
 import Experience from "../components/Icons/Experience";
 import Proficiency from "../components/Icons/Proficiency";
 
-const resumeLink = "./resume/James_Carmichael_-_Resume_(Apr_2020).pdf";
+import "./About.scss";
+
+const resumeLink = "./files/James_Carmichael_-_Resume_(Apr_2020).pdf";
 
 const appList = [
   {
@@ -120,42 +122,51 @@ const appCards = appList.map(
 
 function About(props) {
   return (
-    <div id="about" className="panel panel-grey">
+    <div id="about" className="panel">
       <Grid>
         <Grid.Row>
           <Grid.Col xs={12} lg={6}>
             <h1>About</h1>
             <p>
-              I have over 10 years experience designing and coding for the web,
-              both within agencies and as a freelancer. Recently I've been a
-              UI/UX designer at Texada Software, and have had the opportunity to
-              the redesign and continuous implement new features for 2 web apps
-              and iOS/Android mobile apps, in addition to updating a component
-              library, spearheading the company rebrand effort, and contributing
-              to React app development.
+              I have over 10 years experience designing and coding for the web.
+              I'm currently a UI/UX designer at Texada Software, where I'm
+              responsible for the design of their web and mobile apps. I've also
+              had the opportunity to learn development in React and redesign the
+              company's new branding.
             </p>
             <p>
-              I like problem solving, interesting projects, and open
-              collaborating with talented and passionate people. I'm passionate
-              about beautiful designs and frictionless user experiences. I
-              believe in continuous growth and learning, and I pride myself in
-              being highly organized and efficient. I basically just love
-              organizing things and making them look just right.
+              I enjoy solving interesting problems and collaborate with talented
+              and passionate people. I place a lot of importance in good work
+              ethic and continuous learning. I'm naturally organized, efficient,
+              and can be obsessive about making designs pixel perfect.
             </p>
             <p>
-              Beside UI/UX design, I enjoy playing the piano, hiking, camping,
-              and reading about technology, science, politics, and philosophy.
-              I'm a Quebec native, currently residing in Kitchener, Ontario.
+              When I'm not designing, cooking or watching TV, I like to play the
+              piano and the occasional video game, hiking, camping, or read
+              about technology, science, politics, and philosophy. I'm
+              originally from a small town in Quebec and currently live in
+              Kitchener, Ontario.
             </p>
           </Grid.Col>
           <Grid.Col className="col-resume" xs={12} lg={6}>
             <a
-              className="img-link-hover"
+              className="resume-img-link"
               href={resumeLink}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src="./resume/Resume.png" alt="resume preview" />
+              <img
+                src="./images/home/resume-z-0.png"
+                alt="resume preview"
+                width="500"
+                height="647"
+              />
+              <img
+                src="./images/home/resume-z-1.png"
+                alt="resume preview"
+                width="500"
+                height="647"
+              />
             </a>
             <br />
             <a

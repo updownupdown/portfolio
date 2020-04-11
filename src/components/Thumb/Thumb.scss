@@ -15,13 +15,22 @@
     padding-bottom: 40px;
   }
 
+  // Spacer
+  &-spacer {
+    display: block;
+    margin: 0;
+  }
+
   // Image
   &-image {
+    margin: 0 auto 30px;
+  }
+  &-image-plain {
     transition: 0.3s ease opacity;
 
     img {
       max-width: 100%;
-      margin: 0 auto 30px;
+      margin: 0 auto;
       width: auto;
       height: auto;
     }

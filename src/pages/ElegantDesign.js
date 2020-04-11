@@ -10,11 +10,11 @@ const designTypes = [
     heading: "beautiful",
     content: (
       <p>
-        Seek highest beauty
+        Elegance and grace
         <br />
-        In effortless harmony
+        Harmony without effort
         <br />
-        And crisp SVGs.
+        Subtle drop shadows.
       </p>
     ),
   },
@@ -46,7 +46,7 @@ const designTypes = [
     heading: "intuitive",
     content: (
       <p>
-        Everything makes sense
+        Already at ease
         <br />
         Without prior experience
         <br />
@@ -58,9 +58,21 @@ const designTypes = [
     heading: "informed",
     content: (
       <p>
-        Learn and ask feedback,
+        Learning ceaselessly
         <br />
-        Test designs with real users
+        Integrating all knowledge
+        <br />
+        Too many bookmarks
+      </p>
+    ),
+  },
+  {
+    heading: "tested",
+    content: (
+      <p>
+        Assuming nothing
+        <br />
+        Listen with an open heart
         <br />
         Tim Hortons gift cards.
       </p>
@@ -94,9 +106,9 @@ const designTypes = [
     heading: "fun",
     content: (
       <p>
-        Use Figma all day
+        Use the proper tools
         <br />
-        Clean and polish CSS
+        Take pride in your creation
         <br />
         Transition ease all.
       </p>
@@ -106,7 +118,7 @@ const designTypes = [
     heading: "balanced",
     content: (
       <p>
-        Bestowing white space
+        Bestow open space
         <br />
         Heed excess, follow reason
         <br />

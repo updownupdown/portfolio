@@ -184,3 +184,207 @@
     }
   }
 }
+
+// Thumb - Texada Web App
+.thumb-web-app {
+  position: relative;
+
+  img {
+    transition: 0.75s ease all;
+
+    &:not(.thumb-spacer) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+      transform-origin: center center;
+    }
+
+    &:nth-child(2) {
+      transform: translateX(-50%) translateX(-125px) translateY(-50%)
+        translateY(-40px);
+    }
+    &:nth-child(3) {
+      transform: translateX(-50%) translateX(120px) translateY(-50%)
+        translateY(65px);
+    }
+    &:nth-child(4) {
+      transform: translateX(-50%) translateX(-10px) translateY(-50%)
+        translateY(-20px);
+    }
+    &:nth-child(5) {
+      transform: translateX(-50%) translateX(-40px) translateY(-50%)
+        translateY(35px);
+    }
+    &:nth-child(6) {
+      transform: translateX(-50%) translateX(50px) translateY(-50%)
+        translateY(-5px);
+    }
+  }
+
+  &:hover img {
+    &:nth-child(2) {
+      transform: translateX(-50%) translateX(-128px) translateY(-50%)
+        translateY(-44px);
+      opacity: 0.2;
+    }
+    &:nth-child(3) {
+      transform: translateX(-50%) translateX(126px) translateY(-50%)
+        translateY(69px);
+      opacity: 0.3;
+    }
+    &:nth-child(4) {
+      transform: translateX(-50%) translateX(-17px) translateY(-50%)
+        translateY(-27px);
+      opacity: 0.5;
+    }
+    &:nth-child(5) {
+      transform: translateX(-50%) translateX(-48px) translateY(-50%)
+        translateY(39px);
+    }
+    &:nth-child(6) {
+      transform: translateX(-50%) translateX(65px) translateY(-50%)
+        translateY(-10px);
+    }
+  }
+}
+
+// Thumb - Component Library
+.thumb-components {
+  position: relative;
+
+  img {
+    transition: 0.75s ease all;
+
+    &:not(.thumb-spacer) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: center center;
+    }
+
+    &:nth-child(2) {
+      transform: translateX(-50%) translateX(-105px) translateY(-50%)
+        translateY(-44px);
+    }
+    &:nth-child(3) {
+      transform: translateX(-50%) translateX(-100px) translateY(-50%)
+        translateY(48px);
+    }
+    &:nth-child(4) {
+      transform: translateX(-50%) translateX(80px) translateY(-50%)
+        translateY(40px);
+    }
+    &:nth-child(5) {
+      transform: translateX(-50%) translateX(38px) translateY(-50%)
+        translateY(-20px);
+    }
+  }
+
+  &:hover img {
+    &:nth-child(2) {
+      transform: translateX(-50%) translateX(-100px) translateY(-50%)
+        translateY(-40px);
+      opacity: 0.3;
+    }
+    &:nth-child(3) {
+      transform: translateX(-50%) translateX(-94px) translateY(-50%)
+        translateY(42px);
+      opacity: 0.3;
+    }
+    &:nth-child(4) {
+      transform: translateX(-50%) translateX(74px) translateY(-50%)
+        translateY(34px);
+      opacity: 0.3;
+    }
+    &:nth-child(5) {
+      transform: translateX(-50%) translateX(28px) translateY(-50%)
+        translateY(-10px);
+    }
+  }
+}
+
+// Thumb - Rebrand
+.thumb-rebrand {
+  position: relative;
+
+  img {
+    transition: 0.75s ease all;
+
+    &:not(.thumb-spacer) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: center center;
+    }
+
+    // Logo
+    &:nth-child(2) {
+      transform: scale(0.75) translateX(-50%) translateX(-58px) translateY(-50%)
+        translateY(-8px);
+    }
+    // Logo - shapes
+    &:nth-child(3) {
+      transform: scale(0.75) translateX(-50%) translateX(-58px) translateY(-50%)
+        translateY(-8px);
+      opacity: 0;
+    }
+    // Card - back
+    &:nth-child(4) {
+      transform: scale(0.8) rotate(5deg) translateX(-50%) translateX(-128px)
+        translateY(-50%) translateY(90px);
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    // Card - front
+    &:nth-child(5) {
+      transform: scale(0.8) rotate(-5deg) translateX(-50%) translateX(-150px)
+        translateY(-50%) translateY(28px);
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    // Flyer - back
+    &:nth-child(6) {
+      transform: scale(0.7) rotate(-5deg) translateX(-50%) translateX(118px)
+        translateY(-50%) translateY(-70px);
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    // Flyer - front
+    &:nth-child(7) {
+      transform: scale(0.7) rotate(5deg) translateX(-50%) translateX(120px)
+        translateY(-50%) translateY(-100px);
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &:hover img {
+    // Logo - shapes
+    &:nth-child(3) {
+      transform: scale(0.75) translateX(-50%) translateX(-58px) translateY(-50%)
+        translateY(-8px);
+      opacity: 1;
+    }
+    // Card - back
+    &:nth-child(4) {
+      transform: scale(0.8) rotate(7deg) translateX(-50%) translateX(-138px)
+        translateY(-50%) translateY(110px);
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    // Card - front
+    &:nth-child(5) {
+      transform: scale(0.8) rotate(-8deg) translateX(-50%) translateX(-170px)
+        translateY(-50%) translateY(32px);
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    // Flyer - back
+    &:nth-child(6) {
+      transform: scale(0.7) rotate(-5deg) translateX(-50%) translateX(170px)
+        translateY(-50%) translateY(-110px);
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    // Flyer - front
+    &:nth-child(7) {
+      transform: scale(0.7) rotate(9deg) translateX(-50%) translateX(130px)
+        translateY(-50%) translateY(-130px);
+      box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

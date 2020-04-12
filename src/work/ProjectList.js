@@ -4,26 +4,77 @@ export const ProjectList = [
   {
     component: "TexadaWeb",
     link: "/texada/",
-    image: "./images/thumbs/thumb-texada-web.png",
     title: "Texada Web App",
     description:
       "Showcase of some screens from the completely redesigned Texada web app.",
+    content: (
+      <div className="thumb-web-app">
+        <img
+          className="thumb-spacer"
+          src="./images/thumbs/thumb-spacer.png"
+          alt="spacer"
+        />
+        <img src="./images/thumbs/texada-app-z-1.png" alt="Texada web app" />
+        <img src="./images/thumbs/texada-app-z-2.png" alt="Texada web app" />
+        <img src="./images/thumbs/texada-app-z-3.png" alt="Texada web app" />
+        <img src="./images/thumbs/texada-app-z-4.png" alt="Texada web app" />
+        <img src="./images/thumbs/texada-app-z-5.png" alt="Texada web app" />
+      </div>
+    ),
   },
   {
     component: "Rebrand",
     link: "/rebrand/",
-    image: "./images/thumbs/thumb-rebrand.png",
     title: "Texada Rebrand",
     description:
       "Rebranding of Texada, including a new logo, style guide, marketing material, email signature, etc.",
+    content: (
+      <div className="thumb-rebrand">
+        <img
+          className="thumb-spacer"
+          src="./images/thumbs/thumb-spacer.png"
+          alt="spacer"
+        />
+        <img
+          src="./images/thumbs/rebrand-logo-1.png"
+          alt="Texada rebrand logo"
+        />
+        <img
+          src="./images/thumbs/rebrand-logo-2.png"
+          alt="Texada rebrand logo shapes"
+        />
+        <img
+          src="./images/thumbs/rebrand-card-1.png"
+          alt="Texada rebrand business card"
+        />
+        <img
+          src="./images/thumbs/rebrand-card-2.png"
+          alt="Texada rebrand business card"
+        />
+        <img src="./images/thumbs/rebrand-ad-1.png" alt="Texada rebrand ad" />
+        <img src="./images/thumbs/rebrand-ad-2.png" alt="Texada rebrand ad" />
+      </div>
+    ),
   },
   {
     component: "Components",
     link: "/components/",
-    image: "./images/thumbs/thumb-components.png",
     title: "Texada Component Library",
     description:
       "A preview of the redesigned and consolidated component library used across two web apps.",
+    content: (
+      <div className="thumb-components">
+        <img
+          className="thumb-spacer"
+          src="./images/thumbs/thumb-spacer.png"
+          alt="spacer"
+        />
+        <img src="./images/thumbs/components-z-1.png" alt="Component library" />
+        <img src="./images/thumbs/components-z-2.png" alt="Component library" />
+        <img src="./images/thumbs/components-z-3.png" alt="Component library" />
+        <img src="./images/thumbs/components-z-4.png" alt="Component library" />
+      </div>
+    ),
   },
   {
     component: "Websites",

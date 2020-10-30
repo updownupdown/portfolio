@@ -12,8 +12,8 @@ function Intro(props) {
         className="panel panel-grey panel-intro panel-bottom-shadow"
       >
         <Grid>
-          <Grid.Row className="middle-xs" xs={12} lg={2}>
-            <Grid.Col>
+          <Grid.Row className="middle-xs">
+            <Grid.Col xs={12} lg={5}>
               <h1>
                 Hello, I'm
                 <br />

@@ -11,6 +11,7 @@ import NotFound from "./pages/NotFound.js";
 
 // Work
 import Photography from "./work/Photography.js";
+import Chords from "./work/Chords.js";
 import Rebrand from "./work/Rebrand.js";
 import Websites from "./work/Websites.js";
 import Components from "./work/Components.js";
@@ -29,6 +30,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route path="/photography" component={Photography} />
           <Route path="/rebrand" component={Rebrand} />
+          <Route path="/chords" component={Chords} />
           <Route path="/websites" component={Websites} />
           <Route path="/components" component={Components} />
           <Route path="/texada" component={TexadaWeb} />

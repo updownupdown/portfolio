@@ -12,7 +12,7 @@ function Intro(props) {
         className="panel panel-grey panel-intro panel-bottom-shadow"
       >
         <Grid>
-          <Grid.Row className="middle-xs" xs={12} lg={6}>
+          <Grid.Row className="middle-xs" xs={12} lg={2}>
             <Grid.Col>
               <h1>
                 Hello, I'm
@@ -20,19 +20,17 @@ function Intro(props) {
                 James Carmichael.
               </h1>
               <h2>
-                I'm a UI/UX Designer from Kitchener and
-                <br />
-                I'm passionate about{" "}
+                I'm a Kitchener based UI/UX Designer and I love{" "}
                 <Link smooth to="/#elegant-design">
                   elegant design
                 </Link>
                 .
               </h2>
             </Grid.Col>
-            <Grid.Col xs={12} lg={6}>
+            <Grid.Col xs={12} lg={7}>
               <img
                 className="block"
-                src="./images/home/intro-screen.png"
+                src="./images/home/intro-screen-large.png"
                 alt="Intro"
               />
             </Grid.Col>

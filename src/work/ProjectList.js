@@ -23,6 +23,22 @@ export const ProjectList = [
     ),
   },
   {
+    component: "Chords",
+    link: "/chords/",
+    title: "Piano Chords Web App",
+    description:
+      "A fun, personal project to help me learn music theory and auto-detect chords.",
+    content: (
+      <div className="thumb-chords">
+        <img
+          className="thumb-spacer"
+          src="./images/thumbs/thumb-chords.png"
+          alt="Piano Chords web app"
+        />
+      </div>
+    ),
+  },
+  {
     component: "Rebrand",
     link: "/rebrand/",
     title: "Texada Rebrand",

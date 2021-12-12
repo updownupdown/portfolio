@@ -6,13 +6,13 @@ import Proficiency from "../components/Icons/Proficiency";
 
 import "./About.scss";
 
-const resumeLink = "./files/James_Carmichael_-_Resume_(Apr_2020).pdf";
+const resumeLink = "./files/James_Carmichael_-_Resume_(Dec_2021).pdf";
 
 const appList = [
   {
     name: "Figma",
     logo: "figma",
-    experience: 6,
+    experience: 9,
     proficiency: 9,
     enjoyment: 10,
   },
@@ -47,30 +47,23 @@ const appList = [
   {
     name: "VS Code",
     logo: "vscode",
-    experience: 4,
-    proficiency: 5,
+    experience: 8,
+    proficiency: 6,
     enjoyment: 9,
   },
   {
     name: "git",
     logo: "git",
-    experience: 3,
-    proficiency: 3,
+    experience: 6,
+    proficiency: 5,
     enjoyment: 8,
   },
   {
     name: "React",
     logo: "react",
-    experience: 2,
-    proficiency: 2,
+    experience: 6,
+    proficiency: 4,
     enjoyment: 6,
-  },
-  {
-    name: "Node.js",
-    logo: "nodejs",
-    experience: 2,
-    proficiency: 2,
-    enjoyment: 4,
   },
 ];
 
@@ -128,24 +121,26 @@ function About(props) {
           <Grid.Col xs={12} lg={6}>
             <h1>About</h1>
             <p>
-              I have over 10 years experience designing and coding for the web.
-              I'm currently a UI/UX designer at Texada Software, where I'm
-              responsible for the design of their web and mobile apps. I've also
-              had the opportunity to learn development in React and redesign the
-              company's new branding.
+              I'm a Quebec City born, Kitchener based UI/UX designer, currently
+              working at Intellijoint Surgical, where I'm the owner of the
+              product design for the HIP, KNEE, and VIEW apps.
             </p>
             <p>
-              I enjoy solving interesting problems and collaborate with talented
-              and passionate people. I place a lot of importance in good work
-              ethic and continuous learning. I'm naturally organized, efficient,
-              and can be obsessive about making designs pixel perfect.
+              I have over 12 years experience in designing and developing web
+              apps and websites, as well as print design, branding, and project
+              management. I've had the opportunity to work freelance as well as
+              within or across small and large teams.
             </p>
             <p>
-              When I'm not designing, cooking or watching TV, I like to play the
-              piano and the occasional video game, hiking, camping, or read
-              about technology, science, politics, and philosophy. I'm
-              originally from a small town in Quebec and currently live in
-              Kitchener, Ontario.
+              I value collaboration, feedback, efficiency, passion, and skill,
+              but also self-sufficiency, downtime, beauty, flexibility, and
+              humour.
+            </p>
+            <p>
+              I'm obsessively curious and continuously learning about design,
+              technology, science, psychology, politics, philosophy, etc. I love
+              cycling, hiking, gardening, cooking, camping, travelling, crafts,
+              movies, and music.
             </p>
           </Grid.Col>
           <Grid.Col className="col-resume" xs={12} lg={6}>
@@ -156,16 +151,10 @@ function About(props) {
               rel="noopener noreferrer"
             >
               <img
-                src="./images/home/resume-z-0.png"
+                src="./images/home/resume.png"
                 alt="resume preview"
-                width="500"
-                height="647"
-              />
-              <img
-                src="./images/home/resume-z-1.png"
-                alt="resume preview"
-                width="500"
-                height="647"
+                width="1700"
+                height="2200"
               />
             </a>
             <br />

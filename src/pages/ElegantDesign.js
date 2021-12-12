@@ -10,9 +10,9 @@ const designTypes = [
     heading: "beautiful",
     content: (
       <p>
-        Elegance and grace
+        Elegance and grace,
         <br />
-        Harmony without effort
+        Harmony without effort,
         <br />
         Subtle drop shadows.
       </p>
@@ -24,7 +24,7 @@ const designTypes = [
       <p>
         By the least effort
         <br />
-        Are the greatest things achieved
+        Are the greatest things achieved;
         <br />
         Avoid useless clicks.
       </p>
@@ -34,9 +34,9 @@ const designTypes = [
     heading: "adaptive",
     content: (
       <p>
-        Evolve and adapt
+        Evolve and adapt,
         <br />
-        Support people and their ways
+        Support people and their ways...
         <br />
         Except IE 9.
       </p>
@@ -48,7 +48,7 @@ const designTypes = [
       <p>
         Already at ease
         <br />
-        Without prior experience
+        Without prior experience;
         <br />
         Tooltips just in case.
       </p>
@@ -58,11 +58,11 @@ const designTypes = [
     heading: "informed",
     content: (
       <p>
-        Learning ceaselessly
+        Learning ceaselessly,
         <br />
-        Integrating all knowledge
+        Integrating all knowledge:
         <br />
-        Too many bookmarks
+        Too many bookmarks.
       </p>
     ),
   },
@@ -70,11 +70,11 @@ const designTypes = [
     heading: "tested",
     content: (
       <p>
-        Assuming nothing
+        Assuming nothing,
         <br />
-        Listen with an open heart
+        Listen with an open heart,
         <br />
-        Tim Hortons gift cards.
+        Give Timmies gift cards.
       </p>
     ),
   },
@@ -96,7 +96,7 @@ const designTypes = [
       <p>
         Design like nature,
         <br />
-        Universal principles
+        Universal principles,
         <br />
         Transferable skills.
       </p>
@@ -106,11 +106,11 @@ const designTypes = [
     heading: "fun",
     content: (
       <p>
-        Use the proper tools
+        Use the proper tools,
         <br />
-        Take pride in your creation
+        Take pride in your creation,
         <br />
-        Transition ease all.
+        transition: ease all.
       </p>
     ),
   },
@@ -120,7 +120,7 @@ const designTypes = [
       <p>
         Bestow open space
         <br />
-        Heed excess, follow reason
+        Heed excess, follow reason,
         <br />
         User screens are small.
       </p>

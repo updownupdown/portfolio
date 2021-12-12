@@ -20,11 +20,12 @@ function Intro(props) {
                 James Carmichael.
               </h1>
               <h2>
-                I'm a Kitchener based UI/UX Designer and I love{" "}
+                I seek{" "}
                 <Link smooth to="/#elegant-design">
-                  elegant design
+                  elegant solutions
                 </Link>
-                .
+                <br />
+                to interesting problems.
               </h2>
             </Grid.Col>
             <Grid.Col xs={12} lg={7}>

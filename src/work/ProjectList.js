@@ -2,11 +2,31 @@ import React from "react";
 
 export const ProjectList = [
   {
+    component: "View",
+    link: "/view/",
+    title: "Intellijoint VIEW",
+    description: "Implemented screens and concepts for the VIEW React app.",
+    content: (
+      <div className="thumb-view">
+        <img
+          className="thumb-spacer"
+          src="./images/thumbs/thumb-spacer.png"
+          alt="spacer"
+        />
+        <img src="./images/thumbs/view-1a.png" alt="VIEW web app" />
+        <img src="./images/thumbs/view-1b.png" alt="VIEW web app" />
+        <img src="./images/thumbs/view-2a.png" alt="VIEW web app" />
+        <img src="./images/thumbs/view-2b.png" alt="VIEW web app" />
+        <img src="./images/thumbs/view-3a.png" alt="VIEW web app" />
+        <img src="./images/thumbs/view-3b.png" alt="VIEW web app" />
+      </div>
+    ),
+  },
+  {
     component: "TexadaWeb",
     link: "/texada/",
     title: "Texada Web App",
-    description:
-      "Showcase of some screens from the completely redesigned Texada web app.",
+    description: "Showcase of some screens from the redesigned Texada web app.",
     content: (
       <div className="thumb-web-app">
         <img

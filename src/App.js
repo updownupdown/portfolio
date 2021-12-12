@@ -16,6 +16,7 @@ import Rebrand from "./work/Rebrand.js";
 import Websites from "./work/Websites.js";
 import Components from "./work/Components.js";
 import TexadaWeb from "./work/TexadaWeb.js";
+import View from "./work/View.js";
 import Loaders from "./work/Loaders.js";
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           <Route path="/websites" component={Websites} />
           <Route path="/components" component={Components} />
           <Route path="/texada" component={TexadaWeb} />
+          <Route path="/view" component={View} />
           <Route path="/loaders" component={Loaders} />
           <Route component={NotFound} />
         </Switch>

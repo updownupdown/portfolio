@@ -15,32 +15,20 @@
 
   img {
     transition: 0.6s ease all;
-    width: 250px;
-    height: auto;
+    width: 340px;
+    height: 440px;
     box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.04),
       3px 6px 18px rgba(0, 0, 0, 0.04);
-  }
 
-  // Page 1
-  img:last-child {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%) rotate(-5deg);
-    transform-origin: bottom left;
-  }
-  &:hover img:last-child {
-    transform: translateX(-50%) translateX(-4px) translateY(-50%)
-      translateY(-2px) rotate(-7deg);
-  }
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    transform: rotate(-5deg) scale(0.9);
+    transform-origin: center center;
 
-  // Page 2
-  img:first-child {
-    transform: translate(-26px, 4px) rotate(10deg);
-    transform-origin: bottom right;
-  }
-  &:hover img:first-child {
-    transform: translate(-20px, 6px) rotate(12deg);
+    &:hover {
+      transform: translateX(20px) translateY(-12px) rotate(2deg) scale(1);
+    }
   }
 }
 

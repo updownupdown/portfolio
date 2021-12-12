@@ -15,7 +15,7 @@ function Contact(props) {
             <div className="contact-links">
               <img
                 className="contact-image"
-                src="/images/home/james-photo.png"
+                src="/images/home/james-photo.jpg"
                 alt="James Carmichael"
               />
 

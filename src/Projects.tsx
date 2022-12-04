@@ -94,9 +94,9 @@ export const Projects = () => {
         </p>
         <p>
           Being part of a small team allows me to maintain a holistic approach
-          to design, where I can fully own the the design of a product, and
-          interact with all team members and play a critical part in defining
-          requirements, ideation and prototyping, design, and development.
+          and fully own the product design, as well as interact with all team
+          members and play a critical part in defining requirements, ideation
+          and prototyping, design, and development.
         </p>
       </Project>
       <Project
@@ -108,14 +108,14 @@ export const Projects = () => {
         <p>
           I'm driven to organize, beautify, and optimize, and this naturally
           applies to my work. I've lead multiple projects that involved
-          redesigning or drastically unify and improve the design of a product,
-          or suite of products.
+          redesigning or drastically improving the design of a product, or suite
+          of products.
         </p>
         <p>
           In design like in development, I take time to unify the interface and
-          user experience, and create a solid foundation that can be safely
-          built upon in the long term, both for the sake of the user, and the
-          design and development team.
+          user experience, as well as create a solid foundation that can be
+          safely built upon in the long term, both for the sake of the user, and
+          the design and development team.
         </p>
       </Project>
       <Project
@@ -127,8 +127,8 @@ export const Projects = () => {
           Texada has used several logo designs over the years, but never had a
           coherent or consistent style guide or branding strategy. The existing
           logo looked outdated, was difficult to read, and the colours and
-          symbol did not easily lend themselves to be used across product
-          designs and marketing material.
+          symbol did not easily lend themselves to be used across app or
+          marketing material.
         </p>
         <p>
           After discussing with key stakeholders, I suggested a rebranding
@@ -144,17 +144,16 @@ export const Projects = () => {
         url="https://updownupdown.github.io/chords/"
       >
         <p>
-          In order to help me learn music theory, I wanted to bring together
-          various interactive elements that would interact with each other: a
-          playable piano keyboard, the music staff, the circle of fifths, keys,
-          chords, etc.
+          In order to help me learn music theory, I wanted to create a web app
+          that would bring together various interactive elements: a playable
+          piano keyboard, the music staff, the circle of fifths, keys, chords,
+          etc.
         </p>
         <p>
-          I went through multiple iterations of the design as I learned how each
-          individual piece worked, how it could be made interactive, and how it
-          could in turn interact with other pieces. It became a fun challenge to
-          display how much information as possible, while still being intuitive
-          and simple to use.
+          I went through multiple design iterations as I learned how each
+          individual piece worked and how it could be made to interact with
+          other pieces. It became a fun challenge to display as much information
+          as possible, while still being intuitive and simple to use.
         </p>
       </Project>
       <Project
@@ -164,10 +163,10 @@ export const Projects = () => {
       >
         <p>
           While I no longer am practicing the hobby, I found photography to be a
-          great drive for exploration, and it brought me a deep appreciation for
-          hidden beauty. It's also a great way to experiment with universal
-          design concepts like contrast, colour, focus, composition, balance,
-          etc.
+          great driver for exploration, and it brought me a deep appreciation
+          for hidden beauty. I also found it to be a great way to experiment
+          with universal design concepts like contrast, colour, focus,
+          composition, balance, etc.
         </p>
         <p>
           The photos in this gallery were taken during a one month solo
@@ -181,20 +180,20 @@ export const Projects = () => {
         images={freelanceWebImages}
       >
         <p>
-          During college and until I started focus on UI/UX design, I worked as
-          a freelance web designer and developer. Most projects were marketing
-          websites for local businesses, where I was usually involved in all
-          stages of the project, from project management to design, development,
-          and launch. I would also occasionally be involved in branding and
-          print design.
+          During college and until I started to focus on UI/UX design, I worked
+          as a freelance web designer and developer. Most projects were
+          marketing websites for local businesses, where I was usually involved
+          in all stages of the project, from project management to design,
+          development, launch, and maintenance. I would also occasionally be
+          involved in branding and print design.
         </p>
 
         <p>
-          Over time, I maintained a continually improving theme for WordPress,
-          made up of custom modular panels that could be refined and reused
-          across projects. This was done to increase the quality and efficiency
-          of development, while still allowing enough flexibily to tailor each
-          design to the client's needs.
+          Over time, I created and maintained a continually improving, custom
+          theme for WordPress, made up of modular panels that could be refined
+          and reused across projects. This was done to increase the quality and
+          efficiency of design and development, while allowing enough flexibily
+          to tailor each website to the client's needs.
         </p>
       </Project>
       <Project
@@ -257,15 +256,15 @@ export const Projects = () => {
         url="https://updownupdown.github.io/learn-japanese/"
       >
         <p>
-          After several discussions about languages with a Japanese friend, I
-          wanted to try learning the Hiragana and Katakana syllabaries, and
-          wasn't satisfied with the existing tools available.
+          After several discussions about languages with a friend, I wanted to
+          try learning the Japanese Hiragana and Katakana syllabaries, and
+          wasn't satisfied with the existing tools available online.
         </p>
         <p>
           I thought that creating a web app would be a good opportunity to help
           me memorize the scripts and understand how they're organized, and
-          along the way, build some simple, interactive learning tools as well
-          as creating a small dictionary of phrases.
+          along the way, build interesting learning tools as well as creating a
+          small dictionary of phrases.
         </p>
       </Project>
     </>

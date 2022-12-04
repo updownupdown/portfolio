@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import "./media.scss";
+
+$theme-colors: (
+  "white": #ffffff,
+  "K900": #24292d,
+  "K800": #4e5256,
+  "K700": #696f74,
+  "K600": #83898e,
+  "K500": #9da3a8,
+  "K400": #b5bbc0,
+  "K300": #ced3d6,
+  "K200": #dde1e3,
+  "K150": #edeef0,
+  "K125": #f1f3f4,
+  "K100": #f7f8f9,
+  "accent": #0c9ec2,
+  "accent-hover": #266f8e,
+);
+
+:root {
+  // Generate hex/rgb CSS vars for default/rgba usage, respectively
+  @function hexToRGB($hex) {
+    @return red($hex), green($hex), blue($hex);
+  }
+  @each $name, $color in $theme-colors {
+    --#{$name}: #{$color};
+    --#{$name}-rgb: #{hexToRGB($color)};
+  }
+
+  --font: "Montserrat", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+
+  background: var(--white);
+
+  color: var(--K800);
+  line-height: 1;
+}
+
+body,
+button,
+a {
+  font-family: var(--font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+p {
+  margin: 0 0 20px;
+  font-weight: 500;
+
+  b {
+    font-weight: 700;
+  }
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#root {
+  width: 100%;
+}
+.main {
+  width: 100%;
+}
+
+// Header
+.header-wrap {
+  gap: 20px;
+  width: 100%;
+  padding: 100px 0 140px;
+
+  background: var(--K100);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__name {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      h1 {
+        font-size: 32px;
+        font-weight: 700;
+      }
+      h2 {
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+
+    &__contact {
+      display: flex;
+      gap: 20px;
+
+      list-style-type: none;
+
+      a {
+        font-size: 14px;
+        color: var(--accent);
+
+        &:hover {
+          color: var(--accent-hover);
+        }
+      }
+    }
+  }
+
+  &__slogan {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+.centered-content {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  padding: 0 30px;
+}
+
+// Projects
+.projects-wrap {
+  padding: 100px 0;
+  background: var(--white);
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.project {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  @media #{$query-max-lg} {
+    flex-direction: column;
+    gap: 20px;
+
+    .project__text {
+      order: 2;
+    }
+    .project__thumb {
+      order: 1;
+    }
+  }
+
+  @media #{$query-min-lg} {
+    gap: 60px;
+
+    &:nth-child(2n) {
+      .project__text {
+        order: 2;
+      }
+      .project__thumb {
+        order: 1;
+      }
+    }
+  }
+
+  &__title {
+    margin: -10px 0 10px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__thumb {
+    cursor: pointer;
+    transition: 0.3s ease background-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 12px 20px;
+    gap: 24px;
+
+    border-radius: 12px;
+    background: var(--white);
+
+    &__image {
+      img {
+        display: block;
+        width: 400px;
+      }
+    }
+    &--shadow .project__thumb__image img {
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.08),
+        2px 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      background: unset;
+      border: unset;
+      margin: unset;
+      padding: unset;
+
+      span {
+        transition: 0.3s ease color;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--accent);
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+
+        path {
+          transition: 0.3s ease fill;
+          fill: var(--accent);
+        }
+      }
+    }
+
+    &:hover {
+      background: var(--K100);
+      color: var(--accent-hover);
+
+      span {
+        color: var(--accent-hover);
+      }
+
+      svg path {
+        fill: var(--accent-hover);
+      }
+    }
+  }
+}

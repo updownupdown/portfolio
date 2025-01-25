@@ -1,7 +1,7 @@
 import React from "react";
 import { Projects } from "./Projects";
 
-const resumeLink = "./files/James_Carmichael_-_Resume_(Dec_2022).pdf";
+const resumeLink = "./files/James_Carmichael_-_Resume.pdf";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
             <div className="header__top">
               <div className="header__top__name">
                 <h1>James Carmichael</h1>
-                <h2>Product Designer</h2>
+                <h2>UI/UX Designer</h2>
               </div>
 
               <ul className="header__top__contact">

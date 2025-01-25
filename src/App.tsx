@@ -35,6 +35,15 @@ function App() {
                     Resume
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="https://github.com/updownupdown"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </li>
               </ul>
             </div>
 

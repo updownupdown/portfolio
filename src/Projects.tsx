@@ -214,23 +214,6 @@ export const Projects = () => {
         </p>
       </Project>
       <Project
-        title="Weather Dashboard"
-        thumb="weather.png"
-        thumbShadow
-        url="https://weather.jamescarmichael.ca/"
-      >
-        <p>
-          I'm very particular about how, and how much, information is displayed.
-          This often comes up when trying to look up weather forecasts.
-        </p>
-        <p>
-          I wanted to experiment with accessing the OpenWeather API and
-          displaying a large amount of information in an easy to digest way.
-          This project was also a great opportunity to learn how to set up a
-          backend and basic API.
-        </p>
-      </Project>
-      <Project
         title="World Quiz"
         thumb="world-quiz.png"
         thumbShadow

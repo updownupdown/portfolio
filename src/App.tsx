@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import type { CSSProperties } from "react";
-import { experiments, projects } from "./projects";
+import { projects } from "./projects";
 import type { Kind, Project } from "./projects";
 
 type Filter = "all" | Kind;
@@ -35,6 +35,8 @@ export function App() {
   };
 
   const visible = projects.filter((p) => filter === "all" || p.kind === filter);
+  const recent = visible.filter((p) => !p.earlier);
+  const earlier = visible.filter((p) => p.earlier);
   const count = (f: Filter) => projects.filter((p) => f === "all" || p.kind === f).length;
 
   return (
@@ -71,21 +73,17 @@ export function App() {
         </div>
 
         <section className="grid" aria-label="Projects">
-          {visible.map((p) => (
+          {recent.map((p) => (
             <ProjectCard key={p.id} project={p} open={open === p.id} onToggle={() => toggle(p.id)} />
           ))}
         </section>
 
-        {filter !== "work" && (
-          <section className="experiments" aria-labelledby="experiments-heading">
-            <h2 id="experiments-heading">Earlier experiments</h2>
-            <div className="experiments__list">
-              {experiments.map((e) => (
-                <a key={e.name} href={e.url} target="_blank" rel="noopener" className="experiment">
-                  <img src={e.thumb} alt="" loading="lazy" width={72} height={54} />
-                  {e.name}
-                  <ExternalIcon />
-                </a>
+        {earlier.length > 0 && (
+          <section className="earlier" aria-labelledby="earlier-heading">
+            <h2 id="earlier-heading">Earlier work</h2>
+            <div className="grid grid--compact">
+              {earlier.map((p) => (
+                <ProjectCard key={p.id} project={p} open={open === p.id} onToggle={() => toggle(p.id)} />
               ))}
             </div>
           </section>
@@ -121,7 +119,12 @@ function ProjectCard({ project: p, open, onToggle }: { project: Project; open: b
   }, [open]);
 
   return (
-    <article ref={ref} id={p.id} className={`card${open ? " card--open" : ""}`} style={style}>
+    <article
+      ref={ref}
+      id={p.id}
+      className={`card${p.earlier ? " card--compact" : ""}${open ? " card--open" : ""}`}
+      style={style}
+    >
       <button type="button" className="card__button" aria-expanded={open} aria-controls={detailsId} onClick={onToggle}>
         <div className="card__media">
           <Cover project={p} />
@@ -140,7 +143,7 @@ function ProjectCard({ project: p, open, onToggle }: { project: Project; open: b
       </button>
 
       {open && (
-        <div className="card__details" id={detailsId}>
+        <div className={`card__details${p.galleryLayout === "wide" ? " card__details--wide" : ""}`} id={detailsId}>
           <div className="card__text">
             <p>{p.description}</p>
             <dl>
@@ -159,7 +162,7 @@ function ProjectCard({ project: p, open, onToggle }: { project: Project; open: b
             )}
           </div>
           {p.gallery.length > 0 && (
-            <div className="card__gallery">
+            <div className={`card__gallery${p.gallery[0].frame === "photo" ? " card__gallery--photos" : ""}`}>
               {p.gallery.map((g) => (
                 <img key={g.src} src={g.src} alt={g.alt} loading="lazy" className={`shot shot--${g.frame ?? "screen"}`} />
               ))}
@@ -184,7 +187,14 @@ function Cover({ project: p }: { project: Project }) {
   if (c.type === "screen") {
     return <div className="cover cover--screen"><img src={c.src} alt={c.alt} /></div>;
   }
-  return <div className="cover cover--placeholder">{c.label}</div>;
+  if (c.type === "image") {
+    return <div className="cover cover--image"><img src={c.src} alt={c.alt} /></div>;
+  }
+  return (
+    <div className={`cover cover--trio cover--${c.style}`}>
+      {c.shots.map((s) => <img key={s.src} src={s.src} alt={s.alt} />)}
+    </div>
+  );
 }
 
 function ExternalIcon() {

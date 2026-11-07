@@ -3,13 +3,18 @@ export type Kind = "work" | "play";
 export interface Shot {
   src: string;
   alt: string;
-  /** "screen" spans the gallery width, "phone" and "watch" sit two to a row. */
-  frame?: "screen" | "phone" | "watch";
+  /**
+   * "screen" spans the gallery width, "phone" takes half, "watch" a quarter.
+   * "page" is a tall web page cropped to its top, "photo" keeps its own shape.
+   */
+  frame?: "screen" | "phone" | "watch" | "page" | "photo";
 }
 
 export interface Project {
   id: string;
   kind: Kind;
+  /** Older projects sit in the smaller "Earlier work" grid. */
+  earlier?: boolean;
   name: string;
   kicker: string;
   /** Card background and accent. Each project gets its own pair. */
@@ -18,13 +23,16 @@ export interface Project {
   cover:
     | { type: "phone"; src: string; alt: string; watch?: Shot }
     | { type: "screen"; src: string; alt: string }
-    | { type: "placeholder"; label: string };
+    | { type: "image"; src: string; alt: string }
+    | { type: "trio"; style: "page" | "photo"; shots: Shot[] };
   description: string;
   role?: string;
   platforms?: string;
   stack?: string;
   link?: { label: "Play" | "Visit site"; url: string };
   gallery: Shot[];
+  /** "wide" puts the gallery under the text, for long galleries. */
+  galleryLayout?: "wide";
 }
 
 const img = (name: string) => `${import.meta.env.BASE_URL}img/${name}.webp`;
@@ -185,11 +193,159 @@ export const projects: Project[] = [
     link: { label: "Play", url: "https://updownupdown.github.io/chords/" },
     gallery: [],
   },
+  ...earlierWork(),
 ];
 
-export const experiments = [
-  { name: "Clockworks", url: "https://updownupdown.github.io/clockworks/", thumb: img("old-clockworks") },
-  { name: "World Quiz", url: "https://updownupdown.github.io/world-quiz/", thumb: img("old-world-quiz") },
-  { name: "World Flags Quiz", url: "https://updownupdown.github.io/flags", thumb: img("old-flags") },
-  { name: "Learn Kana", url: "https://updownupdown.github.io/learn-japanese/", thumb: img("old-learn-kana") },
-];
+function earlierWork(): Project[] {
+  const sites = [
+    "veranova", "ginkgo", "dalton", "royal", "aig", "cora", "gbl", "transit-lube", "delft-blue", "brian-limoyo",
+    "chamber", "chervin", "client", "eaf", "ewr", "foodbank", "gcp-surloc", "job-runner", "aswr",
+  ];
+  const photos = [
+    "kam-9858", "nar-7154", "fuj-0317", "kyo-9342", "tok-8967", "nar-7404", "kyo-9299", "koy-6273", "mat-3229",
+    "tok-1578", "kam-0031", "mat-3410", "osa-4446", "fuj-0513", "kyo-9518", "mat-3565", "koy-5104", "tak-1924",
+    "kan-1963", "nar-7373", "tok-8427", "koy-5758", "mat-3387", "kyo-9795", "koy-5890", "mat-3519", "kam-0029",
+    "tok-1831", "koy-6492", "tok-8935", "mat-3945",
+  ];
+  const photo = (id: string): Shot => ({ src: img(`photo-${id}`), alt: "Photograph from Japan, 2008", frame: "photo" });
+
+  return [
+    {
+      id: "texada-web",
+      kind: "work",
+      earlier: true,
+      name: "Texada web app",
+      kicker: "Texada · Rental management",
+      bg: "#1f2128",
+      accent: "#ffc83d",
+      cover: { type: "screen", src: img("texada-web-scheduling"), alt: "Texada ticket scheduling with a map of service calls" },
+      description:
+        "I’m driven to organize, beautify and optimize, and I led several projects that redesigned or drastically improved a product or suite of products. In design as in development, I take time to unify the interface and experience, and to build a solid foundation that can be safely built upon for the long term.",
+      role: "Product design",
+      platforms: "Web",
+      gallery: [
+        { src: img("texada-web-tickets"), alt: "Ticket list" },
+        { src: img("texada-web-work-orders"), alt: "Work order list" },
+        { src: img("texada-web-receiving"), alt: "Quick receiving" },
+        { src: img("texada-web-create-order"), alt: "Create a work order" },
+        { src: img("texada-web-nav"), alt: "Navigation, collapsed and expanded" },
+        { src: img("texada-web-login"), alt: "Sign-in" },
+      ],
+    },
+    {
+      id: "texada-rebrand",
+      kind: "work",
+      earlier: true,
+      name: "Texada rebrand",
+      kicker: "Texada · Brand identity",
+      bg: "#26231a",
+      accent: "#ffd84d",
+      cover: { type: "image", src: img("texada-rebrand-elements"), alt: "Texada brand elements: logo, product marks, type and layouts" },
+      description:
+        "Texada had used several logos over the years but never a coherent style guide. The logo looked dated, was hard to read, and its colours and symbol didn’t carry across apps or marketing. After talking with key stakeholders, I proposed a rebrand that modernized the logo and set a clear style guide, planned for how it would be used across our products, print ads and trade show banners.",
+      role: "Brand and visual design",
+      gallery: [
+        { src: img("texada-rebrand-logos"), alt: "Texada logos: before 2017, 2017 to 2019, and the 2020 rebrand" },
+        { src: img("texada-rebrand-web"), alt: "The new brand on the Texada website" },
+      ],
+    },
+    {
+      id: "websites",
+      kind: "work",
+      earlier: true,
+      name: "Freelance web design",
+      kicker: "Websites for local businesses",
+      bg: "#1f2433",
+      accent: "#9fb4ff",
+      cover: {
+        type: "trio",
+        style: "page",
+        shots: [
+          { src: img("web-ginkgo"), alt: "Ginkgo website" },
+          { src: img("web-veranova"), alt: "Veranova website" },
+          { src: img("web-dalton"), alt: "Dalton website" },
+        ],
+      },
+      description:
+        "Through college and until I focused on UI/UX design, I worked as a freelance web designer and developer, mostly on marketing sites for local businesses. I was usually involved in every stage, from project management to design, development, launch and maintenance, with some branding and print work. Over time I built a custom WordPress theme of modular panels that I refined and reused across projects, to raise quality and speed while leaving room to tailor each site to the client.",
+      role: "Design, development, project management",
+      platforms: "Web",
+      stack: "WordPress",
+      galleryLayout: "wide",
+      gallery: sites.map((n) => ({ src: img(`web-${n}`), alt: `${n.replace(/-/g, " ")} website`, frame: "page" })),
+    },
+    {
+      id: "photography",
+      kind: "play",
+      earlier: true,
+      name: "Photography",
+      kicker: "Japan, 2008",
+      bg: "#2a1a1c",
+      accent: "#ff8f80",
+      cover: { type: "trio", style: "photo", shots: [photo("nar-7404"), photo("kam-9858"), photo("kyo-9299")] },
+      description:
+        "I no longer practice it, but photography was a great driver for exploration and gave me a deep appreciation for hidden beauty. It was also a way to experiment with universal design concepts: contrast, colour, focus, composition and balance. These photos are from a month of solo backpacking in Japan in 2008.",
+      galleryLayout: "wide",
+      gallery: photos.map(photo),
+    },
+    {
+      id: "clockworks",
+      kind: "play",
+      earlier: true,
+      name: "Clockworks",
+      kicker: "Web",
+      bg: "#132440",
+      accent: "#8cc4ff",
+      cover: { type: "screen", src: img("old-clockworks"), alt: "Clockworks: a gear train drawn on a blueprint" },
+      description:
+        "After building a pendulum clock kit from laser-cut wood, I researched mechanical clocks, escapements and gear ratios, and built a playground for trying out gear train configurations, with the goal of building a simulated mechanical clock from scratch.",
+      platforms: "Web",
+      link: { label: "Play", url: "https://updownupdown.github.io/clockworks/" },
+      gallery: [],
+    },
+    {
+      id: "world-quiz",
+      kind: "play",
+      earlier: true,
+      name: "World Quiz",
+      kicker: "Web",
+      bg: "#17301f",
+      accent: "#8fdc8a",
+      cover: { type: "screen", src: img("old-world-quiz"), alt: "World Quiz: a 3D globe with Sweden highlighted" },
+      description:
+        "A remake of an old DOS game I played in high school that quizzed you on every country and capital. The hard part was an interactive 3D globe where each country could be highlighted on its own. Game modes: type every country, guess the capital, guess the country by its flag, and find the country.",
+      platforms: "Web",
+      link: { label: "Play", url: "https://updownupdown.github.io/world-quiz/" },
+      gallery: [],
+    },
+    {
+      id: "flags",
+      kind: "play",
+      earlier: true,
+      name: "World Flags Quiz",
+      kicker: "Web",
+      bg: "#2b2a18",
+      accent: "#f0e07a",
+      cover: { type: "screen", src: img("old-flags"), alt: "World Flags Quiz" },
+      description: "A quiz on the flags of the world, with a map and your score and progress saved as you go.",
+      platforms: "Web",
+      link: { label: "Play", url: "https://updownupdown.github.io/flags" },
+      gallery: [],
+    },
+    {
+      id: "learn-kana",
+      kind: "play",
+      earlier: true,
+      name: "Learn Kana",
+      kicker: "Web",
+      bg: "#2e1a27",
+      accent: "#ff9ccf",
+      cover: { type: "screen", src: img("old-learn-kana"), alt: "Learn Kana: a hiragana table with study options" },
+      description:
+        "I wanted to learn the Japanese hiragana and katakana syllabaries and wasn’t satisfied with the tools online, so I built one to help memorize the scripts and understand how they’re organized, with study tools and a small dictionary of phrases along the way.",
+      platforms: "Web",
+      link: { label: "Play", url: "https://updownupdown.github.io/learn-japanese/" },
+      gallery: [],
+    },
+  ];
+}

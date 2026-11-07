@@ -87,12 +87,7 @@ export const projects: Project[] = [
     kicker: "Phone app · Watch · Web",
     bg: "#08090c",
     accent: "#34e0f0",
-    cover: {
-      type: "phone",
-      src: img("atomos"),
-      alt: "Atomos: hydrogen drawn as a probability cloud",
-      watch: { src: img("atomos-watch-cloud-6"), alt: "Atomos on Wear OS: a carbon atom as a probability cloud" },
-    },
+    cover: { type: "phone", src: img("atomos"), alt: "Atomos: hydrogen drawn as a probability cloud" },
     description:
       "A puzzle game about building atoms and completing the periodic table. Fuse light nuclei into real isotopes and fill electron shells in nature’s order. Finished atoms open as live 3D probability clouds sampled from the real wave functions.",
     role: "Concept, design and build",
@@ -101,10 +96,6 @@ export const projects: Project[] = [
     link: { label: "Play", url: "https://buildatomos.app" },
     gallery: [
       { src: img("atomos-desktop"), alt: "Atomos on desktop" },
-      { src: img("atomos-watch-game-dive"), alt: "Watch mini-game: Dive", frame: "watch" },
-      { src: img("atomos-watch-game-echo"), alt: "Watch mini-game: Echo", frame: "watch" },
-      { src: img("atomos-watch-game-tune"), alt: "Watch mini-game: Tune", frame: "watch" },
-      { src: img("atomos-watch-game-hue"), alt: "Watch mini-game: Hue", frame: "watch" },
     ],
   },
   {
@@ -192,20 +183,6 @@ export const projects: Project[] = [
     platforms: "Web",
     stack: "React, Tone.js, Tonal, Web MIDI",
     link: { label: "Play", url: "https://updownupdown.github.io/chords/" },
-    gallery: [],
-  },
-  {
-    id: "intellijoint-site",
-    kind: "work",
-    name: "Intellijoint website",
-    kicker: "Intellijoint Surgical · Website",
-    bg: "#1c2129",
-    accent: "#a9c1dc",
-    cover: { type: "placeholder", label: "Screenshot to come" },
-    description: "The company website for Intellijoint Surgical, designed and built alongside the product work.",
-    role: "Design and front-end development",
-    platforms: "Web",
-    link: { label: "Visit site", url: "https://intellijointsurgical.com/" },
     gallery: [],
   },
 ];

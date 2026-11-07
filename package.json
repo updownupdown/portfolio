@@ -9,7 +9,7 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "typecheck": "tsc -b",
-    "build:next": "tsc -b && vite build --base=/next/ --outDir dist-next",
+    "build:next": "tsc -b && vite build --outDir dist-next",
     "deploy:next": "npm run build:next && gh-pages -d dist-next -e next --add -m \"Stage new portfolio at /next\""
   },
   "dependencies": {

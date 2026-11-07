@@ -14,5 +14,5 @@ Projects live in `src/projects.ts`: one entry per card, with its colours, cover,
 
 The site is served from the `gh-pages` branch.
 
-- `npm run deploy:next` builds with base `/next/` and publishes it to `gh-pages` under `next/`, leaving the live site at the root untouched. Preview it at https://www.jamescarmichael.ca/next/.
+- `npm run deploy:next` builds with relative asset paths and publishes it to `gh-pages` under `next/`, leaving the live site at the root untouched. Preview it at `/next/` under wherever the Pages site is served.
 - Going live replaces the root with the new build. That step is done separately, once the staged version is approved.
